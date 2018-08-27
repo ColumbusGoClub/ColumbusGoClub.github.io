@@ -103,7 +103,7 @@ input[type=submit] {
 <div class="autocomplete" class="form" id="myForm">
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
     <h1>Check In</h1>
-    <p>https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/edit#gid=518288754&range=A1</p>
+    <p>"https://spreedsheets.google.com/feeds/list/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/default/public/values?alt=json"</p>
     <label for="name"><b>Name</b></label>
     <input id="myInput" type="text" placeholder="Enter Name" name="entry.890056897" required autofocus>
 
@@ -211,7 +211,7 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = "https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/edit#gid=518288754&range=A1";
+var countries = "https://spreedsheets.google.com/feeds/list/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/default/public/values?alt=json";
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
