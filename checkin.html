@@ -6,16 +6,6 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
 /* Add styles to the form container */
 .form-container {
   max-width: 300px;
@@ -58,7 +48,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 
-<div class="form-popup" id="myForm">
+<div class="form" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Check In</h1>
 
