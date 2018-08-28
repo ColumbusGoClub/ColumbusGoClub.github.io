@@ -211,7 +211,11 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = id="food";
+var countries = []
+  /*{ function() {
+    return this
+    }
+  };*/
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
@@ -226,11 +230,12 @@ autocomplete(document.getElementById("myInput"), countries);
     Tabletop.init( { key: publicSpreadsheetUrl,
                      callback: showInfo,
                      simpleSheet: true,
-                     orderby: "FullName" } )
+                     // orderby: "FullName" 
+                   } )
   }
 
   function showInfo(data, tabletop) {
-    document.getElementById("food").innerHTML = [ data ];
+    document.getElementById("food").innerHTML = [ data[0].FullName ];
     console.log(data);
   }
 
