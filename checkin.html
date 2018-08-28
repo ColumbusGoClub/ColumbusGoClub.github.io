@@ -238,10 +238,14 @@ autocomplete(document.getElementById("myInput"), countries);
     document.getElementById("food").innerHTML = [ data[0].FullName ];
     console.log(data);
   }
-  var dLen = data.length
-  for (i = 0; i < dLen; ii++)
-    { countries.push(data[i].FullName); }
   window.addEventListener('DOMContentLoaded', init)
+</script>
+
+<script>
+var dLen = data.length
+for (i = 0; i < dLen; ii++)
+  { countries.push(data[i].FullName); }
+autocomplete(document.getElementById("myInput"), countries)
 </script>
 
 </body>
