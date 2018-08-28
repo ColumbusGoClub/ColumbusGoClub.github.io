@@ -103,6 +103,7 @@ input[type=submit] {
 <div class="autocomplete" class="form" id="myForm">
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
     <h1>Check In</h1>
+    <p id="food"></p>
     <label for="name"><b>Name</b></label>
     <input id="myInput" type="text" placeholder="Enter Name" name="entry.890056897" required autofocus>
 
@@ -229,7 +230,7 @@ autocomplete(document.getElementById("myInput"), countries);
   }
 
   function showInfo(data, tabletop) {
-    alert('Successfully processed!')
+    document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
     console.log(data);
   }
 
