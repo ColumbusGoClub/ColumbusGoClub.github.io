@@ -236,10 +236,10 @@ autocomplete(document.getElementById("myInput"), countries);
 
   function showInfo(data, tabletop) {
     myObj = [data]
-    var dLen = xyz.length;
+    var dLen = myObj.length;
     for (xy in myObj)
       { document.getElementById("food").innerHTML += myObj[xy];
-        countries.push(food); }
+        countries.push("food").innerHTML += myObj[xy]; }
     /*document.getElementById("food").innerHTML = [ data[0].FullName];*/
     console.log(data);
   }
