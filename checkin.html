@@ -230,12 +230,12 @@ autocomplete(document.getElementById("myInput"), countries);
     Tabletop.init( { key: publicSpreadsheetUrl,
                      callback: showInfo,
                      // simpleSheet: true,
-                     // orderby: "FullName" 
+                     // orderby: "FullName"
                    } )
   }
 
   function showInfo(data, tabletop) {
-    document.getElementById("food").innerHTML = [ data[0].FullName ];
+    document.getElementById("food").innerHTML = [ data ];
     console.log(data);
   }
 
