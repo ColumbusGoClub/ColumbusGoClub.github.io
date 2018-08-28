@@ -211,7 +211,7 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var countries = showInfo(data);
+var countries = id="food";
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 autocomplete(document.getElementById("myInput"), countries);
@@ -230,7 +230,7 @@ autocomplete(document.getElementById("myInput"), countries);
   }
 
   function showInfo(data, tabletop) {
-    document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
+    document.getElementById("food").innerHTML = [ data ];
     console.log(data);
   }
 
