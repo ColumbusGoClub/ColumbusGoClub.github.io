@@ -234,7 +234,7 @@ autocomplete(document.getElementById("myInput"), countries);
                    } )
   }
 
-  function showInfo(data) {
+  function showInfo(data, tabletop) {
     document.getElementById("food").innerHTML = [ data[0].FullName ];
     console.log(data);
   }
@@ -242,7 +242,7 @@ autocomplete(document.getElementById("myInput"), countries);
 </script>
 
 <script>
-var dLen = data.length
+var dLen = food.length
 for (i = 0; i < dLen; ii++)
   { countries.push(data[i].FullName); }
 autocomplete(document.getElementById("myInput"), countries)
