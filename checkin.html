@@ -224,7 +224,8 @@ autocomplete(document.getElementById("myInput"), countries);
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
                      callback: showInfo,
-                     simpleSheet: true } )
+                     simpleSheet: true,
+                     orderby: "FullName" } )
   }
 
   function showInfo(data, tabletop) {
