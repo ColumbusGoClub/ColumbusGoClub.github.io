@@ -236,12 +236,13 @@ autocomplete(document.getElementById("myInput"), countries);
 
   function showInfo(data, tabletop) {
     countries.push(data[0].FullName).innerHTML;
+    countries.push(data[1].FullName).innerHTML;
     /*var myObj = [data];
     var dLen = myObj.length;
     for (xy in myObj)
       { document.getElementById("food").innerHTML += myObj[xy].FullName;
-        countries.push(myObj[0].FullName).innerHTML += myObj[xy].FullName; }
-    /*document.getElementById("food").innerHTML = [ data[0].FullName];*/
+        countries.push(myObj[0].FullName).innerHTML += myObj[xy].FullName; }*/
+    document.getElementById("food").innerHTML = [ data[0].FullName];
     console.log(data);
   }
   window.addEventListener('DOMContentLoaded', init)
