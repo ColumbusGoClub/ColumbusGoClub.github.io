@@ -229,13 +229,16 @@ autocomplete(document.getElementById("myInput"), countries);
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
                      callback: showInfo,
-                     // simpleSheet: true,
-                     // orderby: "FullName"
+                     simpleSheet: true,
+                     orderby: "FullName"
                    } )
   }
 
   function showInfo(data, tabletop) {
-    document.getElementById("food").innerHTML = [ data ];
+    var dLen = data.length
+    for (i = 0; i < dLen; ii++)
+      { countries.push(data[i].FullName); }
+    document.getElementById("food").innerHTML = [ data[0].FullName ];
     console.log(data);
   }
 
