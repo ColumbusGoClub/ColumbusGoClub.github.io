@@ -235,10 +235,11 @@ autocomplete(document.getElementById("myInput"), countries);
   }
 
   function showInfo(data, tabletop) {
-    document.getElementById("food").innerHTML = [ data[0].FullName ];
-    var dLen = food.length;
+    xyz = [ data[0].FullName ]
+    document.getElementById("food").innerHTML = xyz;
+    /*var dLen = food.length;
     for (i = 0; i < dLen; ii++)
-      { countries.push(this.data[i].FullName); };
+      { countries.push(init.data[i].FullName); };*/
     console.log(data);
   }
   window.addEventListener('DOMContentLoaded', init)
