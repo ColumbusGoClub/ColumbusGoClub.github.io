@@ -11,25 +11,25 @@
 		height: 50%;
 		width: 100%;
 	}
-	
+
 	#location{
 		height: 50%;
 		width: 100%;
 	}
-	
+
 	#inspirational{
 		height: 50%;
 		width: 100%;
 	}
-	
+
 	.panel{
 		height: 450px !important;
 	}
-	
+
 	.panel-text{
 		width: 100% !important;
 	}
-	
+
 	.panel-main-text{
 		margin: 0 auto;
 		width: 85% !important;
