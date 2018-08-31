@@ -2,7 +2,8 @@
 
 This is the website for the **Columbus Go Club**
 
-**TODO**  
+#H2 TODO  
+
 overall  
 - [x] get SSL/https properly set up (issue was that CNAME of the DNS wasn't pointing to 'username'.github.io)
 - [x] organize java and css
@@ -25,3 +26,4 @@ checkin.html
 norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
 - [ ] make this document editable by club members with approval from an admin  
+- [ ] have a more official code of conduct, perhaps match the AGA
