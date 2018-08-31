@@ -6,7 +6,7 @@ This is the website for the **Columbus Go Club**
 overall  
 - [x] get SSL/https properly set up (issue was that CNAME of the DNS wasn't pointing to 'username'.github.io)
 - [x] organize java and css
-- [x ]minify java and css (Devin using Atom.io with package which automatically minifies .css and .js files when saving)
+- [x] minify java and css (Devin using Atom.io with package which automatically minifies .css and .js files when saving)
 - [] properly set meta tags for SEO
 - [] apply best practices for SEO
 index.html  
