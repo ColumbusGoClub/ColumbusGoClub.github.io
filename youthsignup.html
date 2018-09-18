@@ -7,6 +7,8 @@
 <!-- Custom styles for this template -->
 <link rel="stylesheet" type="text/css" href="css/checkin.min.css"/>
 
+<!-- Test CCS for dropdown -->
+<link rel="stylesheet" media="all" href="https://rawgit.com/hankchizljaw/boilerform/master/dist/css/boilerform.min.css" />
 </head>
 <body>
 
@@ -27,15 +29,20 @@
     <div></div>
 
     <label for="school"><b>School</b></label>
-    <select id="myInput3" name="entry.2096921145">
-      <option value="phoenix">Phoenix Middle School</option>
-      <option value="cca">Columbus Chinese Academy (CCA)</option>
-      <option value="wickliffe">Wickliffe Elementary School</option>
-      <option value="acpa">Arts and College Preparatory Academy (ACPA)</option>
-      <option value="other">Other</option>
-    </select>
+    <div class="boilerform">
+    <div class="c-select-field">
+      <select id="myInput3" name="entry.2096921145">
+        <option value="phoenix">Phoenix Middle School</option>
+        <option value="cca">Columbus Chinese Academy (CCA)</option>
+        <option value="wickliffe">Wickliffe Elementary School</option>
+        <option value="acpa">Arts and College Preparatory Academy (ACPA)</option>
+        <option value="other">Other</option>
+      </select>
+      <span class="c-select-field__decor" aria-hidden="true" role="presentation">&dtrif;</span>
+    </div>
+    </div>
     <div></div>
-    
+
     <button type="submit" class="btn" value="send">Submit</button>
   </form>
 </div>
