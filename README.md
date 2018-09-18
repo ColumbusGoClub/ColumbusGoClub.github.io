@@ -27,3 +27,7 @@ This is the website for the **Columbus Go Club**
 - [ ] have the co-created norms from the google doc load the html of this page
 - [ ] make this document editable by club members with approval from an admin  
 - [ ] have a more official code of conduct, perhaps match the AGA
+
+### checkin.css
+- [ ] integrate the select .form-container and .custom-select CSS (or at least have the CSS match)
+- [ ] minified version doesn't color correctly in atom, check and see if this means there is an error in the code
