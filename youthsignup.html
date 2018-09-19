@@ -17,7 +17,7 @@
 <!-- The Form Itself -->
 <div class="autocomplete" class="form" id="myForm">
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0m7znYcac4YXTQWFoMfhkofq2Z_HVhjOQazxzc64R4OqMaA/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-    <h1>Check In</h1>
+    <h1>Youth Sign Up</h1>
     <label for="firstname"><b>First Name</b></label>
     <input id="myInput1" type="text" placeholder="Enter First Name" name="entry.514670875" required autofocus>
     <div></div>
@@ -27,16 +27,18 @@
     <div></div>
 
     <label for="school"><b>School</b></label>
-    <!-- <div class="custom-select" style="width:200px;"> -->
-      <select class="custom-select" style="width:300px;" id="myInput3" name="entry.2096921145">
+    <div class="custom-select" style="width:280px;">
+      <select class="custom-select" id="myInput3" name="entry.2096921145">
+        <option value="error">Select School</option>
         <option value="phoenix">Phoenix Middle School</option>
         <option value="cca">Columbus Chinese Academy (CCA)</option>
         <option value="wickliffe">Wickliffe Elementary School</option>
         <option value="acpa">Arts and College Preparatory Academy (ACPA)</option>
         <option value="other">Other</option>
       </select>
-    <!-- </div> -->
-    <div></div>
+    </div>
+    <div><br></div>
+    <div><br></div>
 
     <button type="submit" class="btn" value="send">Submit</button>
   </form>
