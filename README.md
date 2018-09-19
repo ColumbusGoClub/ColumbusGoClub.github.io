@@ -8,6 +8,7 @@ This is the website for the **Columbus Go Club**
 - [x] get SSL/https properly set up (issue was that CNAME of the DNS wasn't pointing to 'username'.github.io)
 - [x] organize java and css
 - [x] minify java and css (Devin using Atom.io with package which automatically minifies .css and .js files when saving)
+- [x] create some sort of navigation page that has links that I can use to navigate to all these hidden pages
 - [ ] properly set meta tags for SEO
 - [ ] apply best practices for SEO  
 
@@ -43,14 +44,12 @@ This is the website for the **Columbus Go Club**
 ### youthsignup.html
 - [x] check to see if it properly takes input
 - [x] fix dropdown so that it matches style of the page (CSS if available in the checkin.css file)
-- [ ] point to min.css file
+- [x] point to min.css file
 
 ### youthgamerecords.html
 - [ ] create a page in which youth can record their game results, or perhaps a teacher can record it for them
 - [ ] have those inputs populate a google form, which is then analyzed in a separate sheet, and which is then shown on the site
 
-### "secret" navigation page
-- [ ] create some sort of navigation page that has links that I can use to navigate to all these hidden pages
-
-### minify ERROR
-Figure out why the minify function doesn't remove CSS comments. Either fix this or remove all comments manually
+### 404
+- [ ] fix text at bottom so it says 404 (or something witty) and so that people can click on it as a link back to index page
+- [ ] make video only min-height 100% **AND** centered
