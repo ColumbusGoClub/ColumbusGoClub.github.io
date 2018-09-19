@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<!-- This page is to be used to gather minimum youth information so as to track their progress and games -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="css/checkin.min.css"/>
+
+</head>
+<body>
+
+<!-- Stops Redirection after form is submited -->
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='https://www.columbusgo.club/youthsignup';}"></iframe>
+
+<!-- The Form Itself -->
+<div class="autocomplete" class="form" id="myForm">
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0m7znYcac4YXTQWFoMfhkofq2Z_HVhjOQazxzc64R4OqMaA/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+    <h1>Youth Sign Up</h1>
+    <label for="firstname"><b>First Name</b></label>
+    <input id="myInput1" type="text" placeholder="Enter First Name" name="entry.514670875" required autofocus>
+    <div></div>
+
+    <label for="lastname"><b>Last Name (or initial)</b></label>
+    <input id="myInput2" type="text" placeholder="Enter Last Name or Last Initial" name="entry.164384580" required>
+    <div></div>
+
+    <label for="school"><b>School</b></label>
+    <div class="custom-select" style="width:280px;">
+      <select class="custom-select" name="entry.2096921145">
+        <option value="ERROR">Select School</option>
+        <option value="Phoenix">Phoenix Middle School</option>
+        <option value="CCA">Columbus Chinese Academy (CCA)</option>
+        <option value="Wickliffe">Wickliffe Elementary School</option>
+        <option value="ACPA">Arts and College Preparatory Academy (ACPA)</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div><br></div>
+    <div><br></div>
+
+    <button type="submit" class="btn" value="send">Submit</button>
+  </form>
+</div>
+
+</body>
+
+<script src="scripts/dropdown.min.js"></script>
+</html>
