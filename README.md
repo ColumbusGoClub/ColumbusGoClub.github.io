@@ -41,8 +41,9 @@ This is the website for the **Columbus Go Club**
 - [ ] link this page to the google form LibraryForm so that it inputs data there
 
 ### youthsignup.html
-- [ ] check to see if it properly takes input
-- [ ] fix dropdown so that it matches style of the page (CSS if available in the checkin.css file)
+- [x] check to see if it properly takes input
+- [x] fix dropdown so that it matches style of the page (CSS if available in the checkin.css file)
+- [ ] point to min.css file
 
 ### youthgamerecords.html
 - [ ] create a page in which youth can record their game results, or perhaps a teacher can record it for them
@@ -50,3 +51,6 @@ This is the website for the **Columbus Go Club**
 
 ### "secret" navigation page
 - [ ] create some sort of navigation page that has links that I can use to navigate to all these hidden pages
+
+### minify ERROR
+Figure out why the minify function doesn't remove CSS comments. Either fix this or remove all comments manually
