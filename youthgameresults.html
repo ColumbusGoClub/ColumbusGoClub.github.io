@@ -16,27 +16,47 @@
 
 <!-- The Form Itself -->
 <div class="autocomplete" class="form" id="myForm">
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0m7znYcac4YXTQWFoMfhkofq2Z_HVhjOQazxzc64R4OqMaA/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-    <h1>Youth Sign Up</h1>
-    <label for="firstname"><b>First Name</b></label>
-    <input id="myInput1" type="text" placeholder="Enter First Name" name="entry.514670875" required autofocus>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSc-b6_sAu0CnRPfhzJxfj_foqPXtLjy4hxpGGiAiESZrk5yng/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+    <h1>Record Game Results</h1>
+    <label for="black"><b>Black Player</b></label>
+    <input id="myInput1" type="text" placeholder="Select Name" name="entry.1040390588" required autofocus>
     <div></div>
 
-    <label for="lastname"><b>Last Name (or initial)</b></label>
-    <input id="myInput2" type="text" placeholder="Enter Last Name or Last Initial" name="entry.164384580" required>
+    <label for="white"><b>White Player</b></label>
+    <input id="myInput2" type="text" placeholder="Select Name" name="entry.1258490896" required>
     <div></div>
 
-    <label for="school"><b>School</b></label>
+    <label for="handicap"><b>Head Start (HD)</b></label>
     <div class="custom-select" style="width:280px;">
-      <select class="custom-select" name="entry.2096921145">
-        <option value="ERROR">Select School</option>
-        <option value="Phoenix">Phoenix Middle School</option>
-        <option value="CCA">Columbus Chinese Academy (CCA)</option>
-        <option value="Wickliffe">Wickliffe Elementary School</option>
-        <option value="ACPA">Arts and College Preparatory Academy (ACPA)</option>
-        <option value="Other">Other</option>
+      <select class="custom-select" name="entry.1826908231">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
       </select>
     </div>
+    <div></div>
+
+    <label for="winningcolor"><b>Result (Winner)</b></label>
+    <div class="custom-select" style="width:280px;">
+      <select class="custom-select" name="entry.1073414936">
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+      </select>
+    </div>
+    <div></div>
+
+    <label for="margin"><b>Result (Margin)</b></label>
+    <p>Enter the difference in score of R for resignation</p>
+    <input id="myInput3" type="text" placeholder="Select Name" name="entry.14664875" pattern="^\d\.5$|^\d\d\.5$|R" required>
+    <div></div>
+
     <div><br></div>
     <div><br></div>
 
