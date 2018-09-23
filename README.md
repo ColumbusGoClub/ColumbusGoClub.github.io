@@ -18,6 +18,10 @@ This is the website for the **Columbus Go Club**
 - [ ] Properly insert meetup calendar
 - [ ] Google Maps integrations  
 
+### Library
+- [ ] Change the spreadsheet to have a column called "copies"
+- [ ] Change the "donated by" row to allow combinations of names (eg Devin, Tim, Devin & Tim, etc.)
+
 ### checkin.html  
 - [ ] have form auto-complete with names from the google sheet master contact list
 - [ ] validate names on checkin page
