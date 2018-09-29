@@ -26,7 +26,7 @@ This is the website for the **Columbus Go Club**
 - [ ] have form auto-complete with names from the google sheet master contact list
 - [ ] validate names on checkin page
 - [ ] fix the css file so that there aren't conflicting items
-- [ ] create a .js file and properly organize it  
+- [x] create a .js file and properly organize it  
 
 ### norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
