@@ -1,28 +1,42 @@
 const __checkin = (() => {
   const checkin = {
-    countries: [],
+    currentFocus: undefined,
+    validateUser: (input) => {
+      if (typeof input !== "string") { return false; }
+      var result = __tabletop.existingUsers.indexOf(input);
+      if (result === -1) {
+        event.preventDefault();
+        alert('Couldn\'t find an existing user with that name!');
+        return false;
+      }
+      return true;
+    },
 
     setupAutocomplete: (inp, arr) => {
       /*the autocomplete function takes two arguments,
       the text field element and an array of possible autocompleted values:*/
-      var currentFocus;
-      /*execute a function when someone writes in the text field:*/
+
+      /* Respond to input changes on the name field */
       inp.addEventListener("input", (e) => {
-          var a, b, i, val = this.value;
+          var elem = e.target;
+          var val = elem.value;
+          var arr = __tabletop.existingUsers;
+          var a, b, i;
           /*close any already open lists of autocompleted values*/
           __checkin.closeAllLists();
-          if (!val) { return false;}
-          currentFocus = -1;
+          if (!val || arr.length === 0) { return false;}
+          __checkin.currentFocus = -1;
           /*create a DIV element that will contain the items (values):*/
           a = document.createElement("DIV");
-          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("id", "autocomplete-list");
           a.setAttribute("class", "autocomplete-items");
           /*append the DIV element as a child of the autocomplete container:*/
-          this.parentNode.appendChild(a);
+          elem.parentNode.appendChild(a);
           /*for each item in the array...*/
           for (i = 0; i < arr.length; i++) {
             /*check if the item starts with the same letters as the text field value:*/
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+              __checkin.currentFocus = i;
               /*create a DIV element for each matching element:*/
               b = document.createElement("DIV");
               /*make the matching letters bold:*/
@@ -33,7 +47,7 @@ const __checkin = (() => {
               /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", (e) => {
                   /*insert the value for the autocomplete text field:*/
-                  inp.value = this.getElementsByTagName("input")[0].value;
+                  inp.value = document.getElementsByTagName("input")[0].value;
                   /*close the list of autocompleted values,
                   (or any other open lists of autocompleted values:*/
                   __checkin.closeAllLists();
@@ -44,26 +58,30 @@ const __checkin = (() => {
       });
       /*execute a function presses a key on the keyboard:*/
       inp.addEventListener("keydown", (e) => {
-          var x = document.getElementById(this.id + "autocomplete-list");
+          var x = document.getElementById("autocomplete-list");
           if (x) x = x.getElementsByTagName("div");
           if (e.keyCode == 40) {
             /*If the arrow DOWN key is pressed,
             increase the currentFocus variable:*/
-            currentFocus++;
+            __checkin.currentFocus++;
             /*and and make the current item more visible:*/
             __checkin.addActive(x);
           } else if (e.keyCode == 38) { //up
             /*If the arrow UP key is pressed,
             decrease the currentFocus variable:*/
-            currentFocus--;
+            __checkin.currentFocus--;
             /*and and make the current item more visible:*/
             __checkin.addActive(x);
           } else if (e.keyCode == 13) {
             /*If the ENTER key is pressed, prevent the form from being submitted,*/
             e.preventDefault();
-            if (currentFocus > -1) {
+            var nameInput = document.getElementById("myInput");
+            if (__checkin.currentFocus > -1) {
               /*and simulate a click on the "active" item:*/
-              if (x) x[currentFocus].click();
+              if (x){
+                nameInput.value = x[__checkin.currentFocus].textContent;
+                __checkin.closeAllLists();
+              }
             }
           }
       });
@@ -73,6 +91,7 @@ const __checkin = (() => {
       /*close all autocomplete lists in the document,
       except the one passed as an argument:*/
       var x = document.getElementsByClassName("autocomplete-items");
+      var inp = document.getElementById('myInput');
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
           x[i].parentNode.removeChild(x[i]);
@@ -89,16 +108,16 @@ const __checkin = (() => {
       /*classify an item as "active":*/
       if (!x) return false;
       /*start by removing the "active" class on all items:*/
-      this.removeActive(x);
-      if (currentFocus >= x.length) currentFocus = 0;
-      if (currentFocus < 0) currentFocus = (x.length - 1);
+      __checkin.removeActive(x);
+      if (__checkin.currentFocus >= x.length) __checkin.currentFocus = 0;
+      if (__checkin.currentFocus < 0) __checkin.currentFocus = (x.length - 1);
       /*add class "autocomplete-active":*/
-      x[currentFocus].classList.add("autocomplete-active");
+      x[__checkin.currentFocus].classList.add("autocomplete-active");
     },
     init: () => {
       /* stop autocompleting once someone clicks outside the search field */
       document.addEventListener("click", (e) => {
-          __checkin.closeAllLists(e.target);  // 'this' refers to window, since we are in an addEventListener callback, so need to refer back to __checkin object
+          __checkin.closeAllLists(e.target);
       });
     }
    };
@@ -109,11 +128,12 @@ const __checkin = (() => {
 const __tabletop = (() => {
   return {
 
+    existingUsers: [],
     publicSpreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/pubhtml',
 
     init: () => {
-      Tabletop.init( { key: this.publicSpreadsheetUrl,
-                       callback: this.showInfo,
+      Tabletop.init( { key: __tabletop.publicSpreadsheetUrl,
+                       callback: __tabletop.showInfo,
                        simpleSheet: true,
                        orderby: "FullName"
                      } );
@@ -121,11 +141,11 @@ const __tabletop = (() => {
 
     showInfo: (data, tabletop) => {
       for (i in data) {
-        countries.push(data[i].FullName).innerHTML;
+        __tabletop.existingUsers.push(data[i].FullName).innerHTML;
       }
     },
   };
 })();
 
-__checkin.setupAutocomplete(document.getElementById("myInput"), __checkin.countries);
+__checkin.setupAutocomplete(document.getElementById("myInput"), __tabletop.existingUsers);
 window.addEventListener('DOMContentLoaded', __tabletop.init);
