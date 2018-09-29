@@ -29,6 +29,7 @@ This is the website for the **Columbus Go Club**
 - [ ] fix the css file so that there aren't conflicting items
 - [x] create a .js file and properly organize it  
 - [ ] minify the checkin.js
+- [ ] reintegrate the fuzzy search dropdown list of names currently in the database
 
 ### norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
