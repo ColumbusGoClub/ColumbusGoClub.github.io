@@ -51,14 +51,18 @@ const __checkin = (() => {
               b.innerHTML += arr[i].substr(val.length);
               /*insert a input field that will hold the current array item's value:*/
               b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-              /*execute a function when someone clicks on the item value (DIV element):*/
-              b.addEventListener("click", (e) => {
+
+              /*execute a function when someone clicks or taps on the item value (DIV element):*/
+              const autoFillHandler =  (e) => {
                   /*insert the value for the autocomplete text field:*/
                   inp.value = e.target.textContent;
                   /*close the list of autocompleted values,
                   (or any other open lists of autocompleted values:*/
                   __checkin.closeAllLists();
-              });
+              };
+              b.addEventListener("click", autoFillHandler);
+              b.addEventListener("touchstart", autoFillHandler);
+              b.addEventListener("touchend", autoFillHandler);
               a.appendChild(b);
             }
           }
