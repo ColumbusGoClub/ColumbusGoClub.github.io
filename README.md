@@ -13,6 +13,10 @@ This is the website for the **Columbus Go Club**
 - Learn workflow for team github projects
 
 
+## Project
+
+
+
 ## TO DO  
 
 ### overall  
@@ -23,11 +27,17 @@ This is the website for the **Columbus Go Club**
 - [ ] properly set meta tags for SEO
 - [ ] learn and apply best practices for SEO  
 - [ ] change img to assets? (seems like it might be a common thing)
+- [ ] Look into Github projects and the wiki (might be a better place than the readme file)
+- [ ] Improve Readme
+        https://github.com/matiassingers/awesome-readme
+
 
 ### index.html  
 - [ ] Integrate or Redo index page with bootstrap (to make mobile friendly)
 - [ ] Recode blocks
 - [ ] Properly insert meetup calendar
+  Using HerokuApp: https://github.com/munen/meetup-calendar
+  Using Meetup API: https://code.likeagirl.io/dont-be-scared-of-api-s-a-beginner-s-guide-to-api-s-using-meetup-and-rails-part-1-7fac68635c49
 - [ ] Google Maps integration
 - [ ] add navbar
 
@@ -40,7 +50,6 @@ This is the website for the **Columbus Go Club**
 - [x] validate names on checkin page
 - [ ] fix the css file so that there aren't conflicting items
 - [x] create a .js file and properly organize it  
-- [ ] minify the checkin.js
 
 ### norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
@@ -49,8 +58,6 @@ This is the website for the **Columbus Go Club**
 
 ### checkin.css
 - [ ] integrate the select .form-container and .custom-select CSS (or at least have the CSS match)
-- [x] minified version doesn't color correctly in atom, check and see if this means there is an error in the code
-  NOTE: Alex says this isn't an issue
 
 ### library.html
 - [ ] create a page that allows members to browse the entire library database
