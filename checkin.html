@@ -9,13 +9,11 @@
 </head>
 <body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-<script type="text/javascript">var submitted=false;</script>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='https://www.columbusgo.club/checkin';}"></iframe>
 
-<div class="autocomplete" class="form" id="myForm">
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+<div class="autocomplete form" id="myForm">
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="__checkin.submitted=true;">
     <h1>Check In</h1>
-    <label for="name"><b>Name</b></label>
+    <label for="myInput"><b>Name</b></label>
     <input id="myInput" type="text" placeholder="Enter Name" name="entry.890056897" required autofocus>
 
     <button type="submit" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
@@ -23,6 +21,7 @@
 </div>
 
 <script src="checkin.js"></script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="__submitCheckin()"></iframe>
 </body>
 </html>
 

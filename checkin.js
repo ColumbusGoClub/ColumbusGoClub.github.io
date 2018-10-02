@@ -1,9 +1,16 @@
+let __submitCheckin = function () {
+    if(__checkin.submitted) {
+        window.location='https://www.columbusgo.club/checkin';
+    }
+};
+
 const __checkin = (() => {
   const checkin = {
+    submitted: false,
     currentFocus: undefined,
     validateUser: (input) => {
       if (typeof input !== "string") { return false; }
-      var result = __tabletop.existingUsers.indexOf(input);
+      let result = __tabletop.existingUsers.indexOf(input);
       if (result === -1) {
         event.preventDefault();
         alert('Couldn\'t find an existing user with that name!');
@@ -18,13 +25,13 @@ const __checkin = (() => {
 
       /* Respond to input changes on the name field */
       inp.addEventListener("input", (e) => {
-          var elem = e.target;
-          var val = elem.value;
-          var arr = __tabletop.existingUsers;
-          var a, b, i;
+          let elem = e.target;
+          let val = elem.value;
+          let arr = __tabletop.existingUsers;
+          let a, b, i;
           /*close any already open lists of autocompleted values*/
           __checkin.closeAllLists();
-          if (!val || arr.length === 0) { return false;}
+          if (!val) { return false;}
           __checkin.currentFocus = -1;
           /*create a DIV element that will contain the items (values):*/
           a = document.createElement("DIV");
@@ -35,7 +42,7 @@ const __checkin = (() => {
           /*for each item in the array...*/
           for (i = 0; i < arr.length; i++) {
             /*check if the item starts with the same letters as the text field value:*/
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            if (arr[i].substr(0, val.length).toUpperCase() === val.toUpperCase()) {
               __checkin.currentFocus = i;
               /*create a DIV element for each matching element:*/
               b = document.createElement("DIV");
@@ -47,7 +54,7 @@ const __checkin = (() => {
               /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", (e) => {
                   /*insert the value for the autocomplete text field:*/
-                  inp.value = document.getElementsByTagName("input")[0].value;
+                  inp.value = e.target.textContent;
                   /*close the list of autocompleted values,
                   (or any other open lists of autocompleted values:*/
                   __checkin.closeAllLists();
@@ -58,24 +65,24 @@ const __checkin = (() => {
       });
       /*execute a function presses a key on the keyboard:*/
       inp.addEventListener("keydown", (e) => {
-          var x = document.getElementById("autocomplete-list");
+          let x = document.getElementById("autocomplete-list");
           if (x) x = x.getElementsByTagName("div");
-          if (e.keyCode == 40) {
+          if (e.keyCode === 40) {
             /*If the arrow DOWN key is pressed,
             increase the currentFocus variable:*/
             __checkin.currentFocus++;
             /*and and make the current item more visible:*/
             __checkin.addActive(x);
-          } else if (e.keyCode == 38) { //up
+          } else if (e.keyCode === 38) { //up
             /*If the arrow UP key is pressed,
             decrease the currentFocus variable:*/
             __checkin.currentFocus--;
             /*and and make the current item more visible:*/
             __checkin.addActive(x);
-          } else if (e.keyCode == 13) {
+          } else if (e.keyCode === 13) {
             /*If the ENTER key is pressed, prevent the form from being submitted,*/
             e.preventDefault();
-            var nameInput = document.getElementById("myInput");
+            let nameInput = document.getElementById("myInput");
             if (__checkin.currentFocus > -1) {
               /*and simulate a click on the "active" item:*/
               if (x){
@@ -90,17 +97,17 @@ const __checkin = (() => {
     closeAllLists: (elmnt) => {
       /*close all autocomplete lists in the document,
       except the one passed as an argument:*/
-      var x = document.getElementsByClassName("autocomplete-items");
-      var inp = document.getElementById('myInput');
-      for (var i = 0; i < x.length; i++) {
-        if (elmnt != x[i] && elmnt != inp) {
+      let x = document.getElementsByClassName("autocomplete-items");
+      let inp = document.getElementById('myInput');
+      for (let i = 0; i < x.length; i++) {
+        if (elmnt !== x[i] && elmnt !== inp) {
           x[i].parentNode.removeChild(x[i]);
         }
       }
     },
     removeActive: (x) => {
       /*remove the "active" class from all autocomplete items:*/
-      for (var i = 0; i < x.length; i++) {
+      for (let i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
       }
     },
@@ -129,9 +136,9 @@ const __tabletop = (() => {
   return {
 
     existingUsers: [],
-    publicSpreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/pubhtml',
+    publicSpreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/edit?usp=sharing',
 
-    init: () => {
+    init: ()  => {
       Tabletop.init( { key: __tabletop.publicSpreadsheetUrl,
                        callback: __tabletop.showInfo,
                        simpleSheet: true,
@@ -140,12 +147,14 @@ const __tabletop = (() => {
     },
 
     showInfo: (data, tabletop) => {
-      for (i in data) {
-        __tabletop.existingUsers.push(data[i].FullName).innerHTML;
+      for (let user of data) {
+          if (user && user.FullName && user.FullName !== '?') {
+              __tabletop.existingUsers.push(user.FullName);
+          }
       }
+      __checkin.setupAutocomplete(document.getElementById("myInput"), __tabletop.existingUsers);
     },
   };
 })();
 
-__checkin.setupAutocomplete(document.getElementById("myInput"), __tabletop.existingUsers);
 window.addEventListener('DOMContentLoaded', __tabletop.init);
