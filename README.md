@@ -41,8 +41,6 @@ This is the website for the **Columbus Go Club**
 - [ ] fix the css file so that there aren't conflicting items
 - [x] create a .js file and properly organize it  
 - [ ] minify the checkin.js
-- [x] Fix the fuzzy search dropdown for mobile
-- [x] Fix the fuzzy search on computer, it won't allow you to select names from the dropdown
 
 ### norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
