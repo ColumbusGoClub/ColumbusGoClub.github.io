@@ -2,7 +2,22 @@
 
 This is the website for the **Columbus Go Club**
 
-## TODO  
+## Best Practices
+
+- Seek to find, use, and share the best practices of other coders
+- Track bugs in code and broken stuff in github issues
+- Use "TODO, FIXME, CHANGED, XXX, IDEA, HACK, NOTE, REVIEW, NB, BUG, QUESTION, COMBAK, TEMP" when coding (great when combined with the todo-show package on atom)
+- Leave plenty of comments for poor future coders
+- Properly file css, javacript, assets (media, images, etc)
+- Minify the CSS and Javascript
+- Learn workflow for team github projects
+
+
+## Project
+
+
+
+## TO DO  
 
 ### overall  
 - [x] get SSL/https properly set up (issue was that CNAME of the DNS wasn't pointing to 'username'.github.io)
@@ -10,12 +25,19 @@ This is the website for the **Columbus Go Club**
 - [x] minify java and css (Devin using Atom.io with package which automatically minifies .css and .js files when saving)
 - [x] create some sort of navigation page that has links that I can use to navigate to all these hidden pages
 - [ ] properly set meta tags for SEO
-- [ ] apply best practices for SEO  
+- [ ] learn and apply best practices for SEO  
+- [ ] change img to assets? (seems like it might be a common thing)
+- [ ] Look into Github projects and the wiki (might be a better place than the readme file)
+- [ ] Improve Readme
+        https://github.com/matiassingers/awesome-readme
+
 
 ### index.html  
 - [ ] Integrate or Redo index page with bootstrap (to make mobile friendly)
 - [ ] Recode blocks
 - [ ] Properly insert meetup calendar
+  Using HerokuApp: https://github.com/munen/meetup-calendar
+  Using Meetup API: https://code.likeagirl.io/dont-be-scared-of-api-s-a-beginner-s-guide-to-api-s-using-meetup-and-rails-part-1-7fac68635c49
 - [ ] Google Maps integration
 - [ ] add navbar
 
@@ -28,9 +50,6 @@ This is the website for the **Columbus Go Club**
 - [x] validate names on checkin page
 - [ ] fix the css file so that there aren't conflicting items
 - [x] create a .js file and properly organize it  
-- [ ] minify the checkin.js
-- [ ] Fix the fuzzy search dropdown for mobile
-- [ ] Fix the fuzzy search on computer, it won't allow you to select names from the dropdown
 
 ### norms.html  
 - [ ] have the co-created norms from the google doc load the html of this page
@@ -39,8 +58,6 @@ This is the website for the **Columbus Go Club**
 
 ### checkin.css
 - [ ] integrate the select .form-container and .custom-select CSS (or at least have the CSS match)
-- [x] minified version doesn't color correctly in atom, check and see if this means there is an error in the code
-  NOTE: Alex says this isn't an issue
 
 ### library.html
 - [ ] create a page that allows members to browse the entire library database
