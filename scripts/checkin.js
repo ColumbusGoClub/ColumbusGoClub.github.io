@@ -38,7 +38,7 @@ const __checkin = (() => {
           a.setAttribute("id", "autocomplete-list");
           a.setAttribute("class", "autocomplete-items");
           /*append the DIV element as a child of the autocomplete container:*/
-          elem.parentNode.appendChild(a);
+          inp.parentNode.appendChild(a);
           /*for each item in the array...*/
           for (i = 0; i < arr.length; i++) {
             /*check if the item starts with the same letters as the text field value:*/
@@ -96,7 +96,7 @@ const __checkin = (() => {
             }
           }
       });
-
+        document.getElementById("myInput").setAttribute("placeholder", "Enter Name");
     },
     closeAllLists: (elmnt) => {
       /*close all autocomplete lists in the document,
@@ -138,20 +138,20 @@ const __checkin = (() => {
 
 const __tabletop = (() => {
   return {
-
+    tabletop: undefined,
     existingUsers: [],
     publicSpreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1X6zE0Lq4qS9sodQOP0QX-ZyzCG6njhi7WIC-Z3uV4GY/edit?usp=sharing',
 
     init: ()  => {
-      Tabletop.init( { key: __tabletop.publicSpreadsheetUrl,
+      this.tabletop = Tabletop.init( { key: __tabletop.publicSpreadsheetUrl,
                        callback: __tabletop.showInfo,
-                       simpleSheet: true,
                        orderby: "FullName"
                      } );
     },
 
     showInfo: (data, tabletop) => {
-      for (let user of data) {
+      const allUsers = this.tabletop.sheets("Names").elements;
+      for (let user of allUsers) {
           if (user && user.FullName && user.FullName !== '?') {
               __tabletop.existingUsers.push(user.FullName);
           }

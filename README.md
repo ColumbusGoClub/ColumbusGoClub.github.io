@@ -48,7 +48,7 @@ This is the website for the **Columbus Go Club**
 ### checkin.html  
 - [x] have form auto-complete with names from the google sheet master contact list
 - [x] validate names on checkin page
-- [ ] fix the css file so that there aren't conflicting items
+- [x] fix the css file so that there aren't conflicting items
 - [x] create a .js file and properly organize it  
 
 ### norms.html  
