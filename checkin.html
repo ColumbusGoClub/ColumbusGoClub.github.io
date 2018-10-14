@@ -13,11 +13,14 @@
 <div class="autocomplete form" id="myForm">
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="__checkin.submitted=true;">
     <h1>Check in at one of our events!</h1>
-    <div>
-      <input id="myInput" type="text" placeholder="Autocomplete is loading..." name="entry.890056897" required autofocus>
+    <div id="desktop-submit-container">
+      <div id="input-container">
+        <input id="myInput" type="text" placeholder="Autocomplete is loading..." name="entry.890056897" required autofocus>
+      </div>
+      <button type="submit" id="checkin-submit-desktop" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
     </div>
 
-    <button type="submit" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
+    <button type="submit" id="checkin-submit-mobile" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
   </form>
 </div>
 

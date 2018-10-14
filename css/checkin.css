@@ -1,9 +1,65 @@
 body {font-family: Arial, Helvetica, sans-serif;display: flex;overflow-y: hidden;}
 * {box-sizing: border-box;}
 
+@media(max-width: 719px){
+  #input-container .autocomplete-items{
+    position: relative;
+    width: 280px;
+    margin-bottom: 0.5em;
+  }
+  #checkin-submit-desktop{
+    visibility: hidden;
+    display: none;
+  }
+  #checkin-submit-mobile{
+    visibility: visible;
+  }
+  .form-container {
+    max-width: 300px;
+  }
+}
+
+@media(min-width: 720px){
+  #checkin-submit-desktop{
+    visibility: visible;
+  }
+  #checkin-submit-mobile{
+    visibility: hidden;
+    display: none;
+  }
+  .form-container{
+    max-width: 600px;
+  }
+  #desktop-submit-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #input-container{
+    width: 60%;
+  }
+  #input-container .autocomplete-items{
+    width: 274px;
+  }
+  #checkin-submit-desktop{
+    width: 30%;
+    height: 48px;
+  }
+  .autocomplete.form{
+    width: auto;
+  }
+  #input-container #myInput{
+    margin: 0;
+  }
+}
+
+#myInput{
+  margin-bottom: 0.5em;
+}
+
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
   padding: 10px;
   background-color: white;
 }
@@ -68,7 +124,7 @@ input[type=submit] {
   color: #fff;
 }
 .autocomplete-items {
-  position: absolute;
+  position: relative;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   width: 300px;
