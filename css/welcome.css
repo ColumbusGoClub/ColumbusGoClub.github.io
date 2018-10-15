@@ -1,13 +1,93 @@
-@media(min-width: 900px){
-	#nav .header-link {
-		font-size: large;
+@media(min-width: 1740px){
+	#center-column #panel-container .card{
+		width: 24%;
+	}
+	.card img.panel-image{
+		height: 220px;
 	}
 }
 
-@media(min-width: 720px) and (max-width: 899px){
+@media(min-width: 1085px) and (max-width: 1739px){
+	#center-column #panel-container .card{
+		width: 48%;
+	}
+	.card img.panel-image{
+		height: 350px;
+	}
+}
+
+@media(min-width: 1540px){
+	#welcome{
+		width: 35%;
+	}
+	#meetup-map-container{
+		width: 65%;
+		padding-right: 5px;
+	}
+	#meetup-map-container #meetup-map{
+		margin: 1em 0 1em 1em;
+	}
+}
+
+@media(min-device-width: 770px){
+	#header-links{
+		height: 100%;
+		padding-top: 1rem;
+		width: 55em;
+		display: flex;
+		justify-content: flex-end;
+	}
+	#center-column{
+		width: 70%;
+	}
+}
+
+@media(max-device-width: 769px){
+	#center-column{
+		width: 90%;
+	}
+	#header-links{
+		display: none;
+	}
+	img.panel-image{
+		height: 500px;
+	}
+	h5.card-title{
+		font-size: 2.5rem;
+	}
+	p.card-text{
+		font-size: 2rem;
+	}
+	.card-links a.btn{
+		font-size: 1.5rem;
+	}
+}
+
+@media(max-width: 1549px){
+	#welcome{
+		width: 100%;
+	}
+	#meetup-map-container{
+		width: 100%;
+	}
+}
+
+@media(max-width: 899px){
 	#nav .header-link {
-		font-size: small;
-		font-weight: bold;
+		display: none;
+	}
+}
+
+@media(max-width: 845px){
+	#center-column #panel-container .card{
+		width: 100%;
+	}
+
+	#center-column #panel-container .card .card-body{
+		min-height: 15rem;
+	}
+	.card-body p.card-text{
+		font-size: 1.5rem;
 	}
 }
 
@@ -15,6 +95,34 @@
 
 	#nav .header-link {
 		visibility: hidden;
+	}
+	#container #center-column{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 0 1rem 1rem;
+	}
+}
+
+@media(max-device-width: 600px){
+	#splash #welcome p{
+		font-size: 2.5rem;
+	}
+	#splash #welcome .btn{
+		font-size: 2rem;
+	}
+	#splash #welcome h1{
+		font-size: 5.75rem;
+	}
+	body header#nav{
+		height: 9rem;
+	}
+	body #nav #header-left span{
+		font-size: 3.5rem;
+	}
+	body #nav #header-left img{
+		height: 6rem;
+		width: 6rem;
 	}
 }
 
@@ -29,6 +137,19 @@ div{
 h2{
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+#header-left span{
+	font-size: 2.05rem;
+	min-width: 350px;
+}
+
+#header-left span, #welcome h1, #welcome p, .card-body{
+	color: #222;
+}
+
+#nav .header-link {
+	font-size: large;
 }
 
 .fade-in-left{
@@ -60,22 +181,31 @@ h2{
 }
 
 #welcome .display-4{
-	font: italic 3.75em "Fira Sans", serif;
+	font: italic 3.75rem "Fira Sans", serif;
 	text-align: left;
+}
+
+#welcome p{
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+#welcome p.lead{
+	margin-bottom: 2rem;
 }
 
 #meetup-map-container{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 30em;
+	height: 40rem;
 	min-width: 20em;
 }
 
 #meetup-map{
 	width: 95%;
 	height: 90%;
-	margin: 1em;
+	margin: 1em 0 1em 0;
 	border: none;
 	border-radius: 5px;
 }
@@ -117,11 +247,13 @@ h2{
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 #panel-container .card{
-	margin: 1em;
+	min-width: 18rem;
+	/*width: 45%;*/
+	margin-bottom: 1rem;
 }
 
 .panel-image{
@@ -147,6 +279,10 @@ header#nav{
 	width: 100%;
 }
 
+title{
+
+}
+
 #header-left{
 	display: flex;
 	width: 30em;
@@ -165,7 +301,6 @@ header#nav{
 }
 
 #center-column{
-	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 2em;
@@ -179,14 +314,6 @@ header#nav{
 
 .card-links a{
 	font-size: medium;
-}
-
-#header-links{
-	height: 100%;
-	padding-top: 1rem;
-	width: 55em;
-	display: flex;
-	justify-content: flex-end;
 }
 
 .header-link{
