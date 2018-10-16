@@ -91,6 +91,47 @@
 	}
 }
 
+@media(max-device-width: 768px){
+	footer #blackstripe{
+		height: 35rem;
+	}
+	#blackstripe #organizer-email{
+		font-size: 3rem;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#blackstripe #reach-out, #blackstripe #tourney-callout{
+		font-size: 2.5rem;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#blackstripe #icon-plane{
+		width: auto;
+		height: auto;
+	}
+	#blackstripe #icon-plane img{
+		width: 100px;
+		height: 78px;
+	}
+	#blackstripe div#icons{
+		width: 100%;
+	}
+	#blackstripe div#icons a img{
+		width: 70px;
+		height: 70px;
+	}
+	#welcome.jumbotron{
+		padding-bottom: 0;
+	}
+	#splash #welcome p{
+		font-size: 3rem;
+	}
+}
+
 @media(max-width: 740px){
 
 	#nav .header-link {
@@ -105,9 +146,6 @@
 }
 
 @media(max-device-width: 600px){
-	#splash #welcome p{
-		font-size: 2.5rem;
-	}
 	#splash #welcome .btn{
 		font-size: 2rem;
 	}
