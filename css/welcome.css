@@ -19,6 +19,7 @@
 @media(min-width: 1540px){
 	#welcome{
 		width: 35%;
+		margin-top: 4rem;
 	}
 	#meetup-map-container{
 		width: 65%;
@@ -160,6 +161,12 @@
 	}
 }
 
+@media(max-width: 1549px){
+	div#splash div#welcome{
+		margin-bottom: 0;
+	}
+}
+
 @media(max-width: 600px) and (max-device-width: 600px){
 	#splash #welcome .btn{
 		font-size: 2rem;
@@ -193,9 +200,13 @@
 	body #nav #header-links-mobile *{
 		font-size: 2rem;
 	}
+	div#splash div#welcome a.btn{
+		font-size: 2.5rem;
+	}
 	div#splash div#welcome h1.display-4{
 		font-size: 6rem;
 	}
+
 }
 
 body{
