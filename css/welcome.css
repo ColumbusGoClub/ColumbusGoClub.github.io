@@ -82,12 +82,6 @@
 	img.panel-image{
 		height: 500px;
 	}
-	h5.card-title{
-		font-size: 2.5rem;
-	}
-	p.card-text{
-		font-size: 2rem;
-	}
 	.card-links a.btn{
 		font-size: 1.5rem;
 	}
@@ -112,16 +106,16 @@
 	#center-column #panel-container .card{
 		width: 100%;
 	}
-
 	#center-column #panel-container .card .card-body{
 		min-height: 15rem;
-	}
-	.card-body p.card-text{
-		font-size: 2rem;
 	}
 }
 
 @media(max-device-width: 769px){
+	nav.navbar div.brand a.navbar-brand img{
+		width: 100px;
+		height: 90px;
+	}
 	footer #blackstripe{
 		height: 35rem;
 	}
@@ -158,7 +152,7 @@
 		padding-bottom: 0;
 	}
 	#splash #welcome p{
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	#hamburger{
 		visibility: visible;
@@ -196,6 +190,16 @@
 	}
 }
 
+@media(max-device-width: 769px) and (min-device-width: 551px) {
+	#center-column #panel-container div.card div.card-body h5.card-title{
+		font-size: 2rem;
+	}
+	#center-column #panel-container div.card div.card-body p.card-text{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
+
 @media(max-device-width: 550px){
 	body nav{
 		height: 10rem;
@@ -209,7 +213,17 @@
 	div#splash div#welcome h1.display-4{
 		font-size: 6rem;
 	}
+	#center-column #panel-container div.card div.card-body h5.card-title{
+		font-size: 3rem;
+	}
+	#center-column #panel-container div.card div.card-body p.card-text{
+		font-size: 2.5rem;
+		text-align: center;
+	}
+}
 
+#center-column #panel-container div.card div.card-body p.card-text{
+	color: black;
 }
 
 body{
@@ -225,6 +239,16 @@ h2{
 	margin-bottom: 0;
 }
 
+nav.navbar div.brand{
+	display: flex;
+	align-items: center;
+}
+
+nav.navbar div span{
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
 ul#header-links-desktop li a.header-link {
 	font-size: large;
 	padding-left: 0.25rem;
@@ -234,8 +258,6 @@ ul#header-links-desktop li a.header-link {
 #header-links-mobile{
 	padding: 0;
 	height: auto;
-	/*margin-top: auto;*/
-	/*margin-bottom: auto;*/
 }
 
 #header-links-mobile div.dropdown-menu a.dropdown-item{
@@ -298,7 +320,7 @@ ul#header-links-desktop li a.header-link {
 #meetup-map{
 	width: 95%;
 	height: 90%;
-	margin: 1em 0 1em 0;
+	margin: 0 0 1em 0;
 	border: none;
 	border-radius: 5px;
 }
@@ -384,6 +406,10 @@ nav{
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 2em;
+}
+
+.card-body h5.card-title{
+	text-align: center;
 }
 
 .card-links{
@@ -519,9 +545,6 @@ a#email:visited,a#email:active{
 	}
 	#header-links-mobile .navbar-toggler .animated-icon span:nth-child(3){
 		top: 2rem;
-	}
-	a.navbar-brand span{
-		
 	}
 }
 
