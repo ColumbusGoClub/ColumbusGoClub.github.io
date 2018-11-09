@@ -111,7 +111,21 @@
 	}
 }
 
+@media(min-device-width: 770px){
+	nav.navbar div span{
+		font-size: 1.5rem;
+		font-weight: normal;
+	}
+	div.card-body div.card-links a.btn.btn-lg{
+		padding: 0.8rem;
+	}
+}
+
 @media(max-device-width: 769px){
+	nav.navbar div span{
+		font-size: 3rem;
+		font-weight: bold;
+	}
 	nav.navbar div.brand a.navbar-brand img{
 		width: 100px;
 		height: 90px;
@@ -242,11 +256,6 @@ h2{
 nav.navbar div.brand{
 	display: flex;
 	align-items: center;
-}
-
-nav.navbar div span{
-	font-size: 2.5rem;
-	font-weight: bold;
 }
 
 ul#header-links-desktop li a.header-link {
