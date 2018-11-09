@@ -4,7 +4,10 @@
 	<head>
 
 		<meta charset="utf-8">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script src="scripts/dropdown.min.js"></script>
+		<script src="scripts/effects.min.js"></script>
+		<script src="scripts/index.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<meta name="keywords" content="Go, Go Game, Columbus, Club, Weiqi, Wei Qi, Weichi, Baduk, Columbus Go Club, Play Go in Columbus, Columbus Ohio Go Club">
@@ -18,16 +21,20 @@
 
 		<!-- Custom styles for this template -->
 		<link rel="stylesheet" type="text/css" href="css/welcome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mdb.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	</head>
 
 	<body>
-		<header id="nav">
-			<div id="header-left">
-				<a href="index.html"><img src="img/go-stones-b&w.png" height="60px" width="55px"/></a>
+		<nav class="navbar navbar-light">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/go-stones-b&w.png" height="60px" width="55px"/>
 				<span>The Columbus Go Club</span>
-			</div>
+			</a>
 			<ul id="header-links-desktop" class="nav">
 				<li class="nav-item">
 					<a class="nav-link header-link" href="checkin.html">Check In!</a>
@@ -40,32 +47,31 @@
 				</li>
 			</ul>
 			<div id="header-links-mobile" class="dropdown">
-				<button id="nav-menu-item" type="button" class="btn btn-primary btn-md dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigate</button>
-				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-menu-item">
-					<a class="dropdown-item" href="checkin.html">Check In!</a>
-					<a class="dropdown-item" href="library.html">Library</a>
-					<a class="dropdown-item" href="youthsignup.html">Youth Tournament Signup</a>
-				</div>
+				<button class="navbar-toggler" type="button" data-target="#navbar-contents"
+						aria-controls="navbar-contents" aria-expanded="false" aria-label="Toggle menu">
+					<div class="animated-icon"><span></span><span></span><span></span></div>
+				</button>
 			</div>
-			<!--<div class="dropdown">-->
-				<!--<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-					<!--Dropdown button-->
-				<!--</button>-->
-				<!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-					<!--<a class="dropdown-item" href="#">Action</a>-->
-					<!--<a class="dropdown-item" href="#">Another action</a>-->
-					<!--<a class="dropdown-item" href="#">Something else here</a>-->
-				<!--</div>-->
-			<!--</div>-->
-		</header>
+		</nav>
+		<div class="collapse navbar-collapse" id="navbar-contents">
+			<ul id="header-links-navbar" class="nav">
+				<li class="nav-item">
+					<a class="nav-link header-link" href="checkin.html">Check In!</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header-link" href="library.html">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
+				</li>
+			</ul>
+		</div>
 		<div id="container">
 			<div id="center-column">
 				<div id="splash" class="row">
 					<div id="welcome" class="jumbotron">
 						<h1 class="display-4">Onegaishimasu!</h1>
 						<p class="lead">Play go in Columbus, Ohio! New and experienced players of all strengths welcome.</p>
-						<p>At an event now?</p>
-						<a class="btn btn-primary btn-lg" href="checkin.html" role="button">Check in!</a>
 					</div>
 					<div id="meetup-map-container">
 						<iframe id="meetup-map" src="https://www.google.com/maps/d/u/1/embed?mid=1dnpcS8HPTJ0oLg18RIgvLp-Z91Bx0sOY" width="640" height="480"></iframe>
@@ -134,5 +140,5 @@
 		</div>
 	</footer>
 	<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"09da399c9dcf0ac4b548e25ff","lid":"41ec52a08a"}) })</script>-->
-
+	<script src="scripts/mdb.min.js"></script>
 </html>
