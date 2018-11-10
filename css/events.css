@@ -23,6 +23,8 @@ ul#header-links-navbar li.nav-item:nth-child(4) a{
     border: 1px solid transparent;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    max-height: 800px;
+    overflow-y: auto;
 }
 
 #events-list div.event{
