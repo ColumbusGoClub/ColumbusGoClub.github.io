@@ -166,7 +166,7 @@
 		padding-bottom: 0;
 	}
 	#splash #welcome p{
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	#hamburger{
 		visibility: visible;
@@ -658,7 +658,7 @@ a#email:visited,a#email:active{
 }
 
 #navbar-contents li.nav-item a.nav-link{
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	text-align: center;
 }
 
@@ -672,3 +672,10 @@ a#email:visited,a#email:active{
 	color: white;
 }
 
+#header-links-navbar li.nav-item a:hover{
+	text-decoration: underline;
+}
+
+div#icons a{
+	margin: 0 1rem;
+}
