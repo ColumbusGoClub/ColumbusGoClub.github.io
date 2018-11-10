@@ -664,5 +664,11 @@ a#email:visited,a#email:active{
 
 #header-links-navbar{
 	height: 100%;
+	background-color: black;
+	text-transform: uppercase;
+}
+
+#header-links-navbar li.nav-item a{
+	color: white;
 }
 
