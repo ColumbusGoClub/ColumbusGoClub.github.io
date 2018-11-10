@@ -653,7 +653,7 @@ a#email:visited,a#email:active{
 }
 
 #navbar-contents li.nav-item{
-	width: 33%;
+	width: 25%;
 	align-items: center;
 	justify-content: center;
 	display: flex;
