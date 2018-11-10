@@ -82,9 +82,6 @@
 	img.panel-image{
 		height: 500px;
 	}
-	.card-links a.btn{
-		font-size: 2rem;
-	}
 }
 
 @media(max-width: 1549px){
@@ -212,6 +209,9 @@
 		font-size: 1.5rem;
 		text-align: center;
 	}
+	.card-links a.btn{
+		font-size: 2rem;
+	}
 }
 
 @media(max-device-width: 550px){
@@ -233,6 +233,9 @@
 	#center-column #panel-container div.card div.card-body p.card-text{
 		font-size: 2.5rem;
 		text-align: center;
+	}
+	.card-links a.btn{
+		font-size: 2.5rem;
 	}
 }
 
@@ -500,7 +503,6 @@ a#email:visited,a#email:active{
 }
 
 #icons{
-	width: 135px;
 	text-align: center;
 	margin: 0 auto;
 }
