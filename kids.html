@@ -18,11 +18,6 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <script>
-      $.get("navbar.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-      });
-    </script>
     <script src="scripts/jquery-3.3.1.min.js"></script>
 
   </head>
@@ -41,8 +36,18 @@
         </li>
       </ul>
     </nav> -->
-    <div id="nav-placeholder">
-    </div>
+
+    <!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("navbar.html");
+});
+</script>
+<!--end of Navigation bar-->
 
     <div class="container">
 
