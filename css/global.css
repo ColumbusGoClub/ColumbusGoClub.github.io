@@ -128,7 +128,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     opacity: 0.1;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     height: 6rem;
     min-height: 100px;
     padding: 1rem;
