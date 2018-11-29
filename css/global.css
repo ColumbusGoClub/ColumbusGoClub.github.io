@@ -154,7 +154,6 @@ ul#header-links-desktop li a.header-link {
     font-size: large;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
-    color: #222;
 }
 
 ul#header-links-desktop li a.header-link:visited{
@@ -178,6 +177,7 @@ ul#header-links-desktop li a.header-link:visited{
     font-size: large;
     margin: 0 1rem 0 1rem;
     border-left: #555555;
+    color: #222;
 }
 
 .header-link:hover{
