@@ -159,7 +159,7 @@ ul#header-links-desktop li a.header-link {
 ul#header-links-desktop li a.header-link:visited{
     text-decoration-line: none !important;
     text-decoration-style: initial !important;
-    text-decoration-color: initial !important;
+    text-decoration-color: #222 !important;
 }
 
 #header-links-mobile{
@@ -177,7 +177,6 @@ ul#header-links-desktop li a.header-link:visited{
     font-size: large;
     margin: 0 1rem 0 1rem;
     border-left: #555555;
-    color: #222
 }
 
 .header-link:hover{
