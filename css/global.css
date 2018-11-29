@@ -154,12 +154,13 @@ ul#header-links-desktop li a.header-link {
     font-size: large;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+    color: #222;
 }
 
 ul#header-links-desktop li a.header-link:visited{
     text-decoration-line: none !important;
     text-decoration-style: initial !important;
-    text-decoration-color: #222 !important;
+    text-decoration-color: initial !important;
 }
 
 #header-links-mobile{
