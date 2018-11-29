@@ -681,3 +681,89 @@ a#email:visited,a#email:active{
 div#icons a{
 	margin: 0 1rem;
 }
+
+/*
+  _______________________________
+< Wow, what a cool events widget! >
+  -------------------------------
+  \   ^__^
+   \  (oo)\_______
+      (__)\       )\/\
+	      ||----w |
+	      ||     ||
+
+  |||                |||
+  vvv                vvv
+*/
+
+#events-header{
+	font-size: 1.5rem;
+	color: white;
+	font-family: "arial", sans-serif;
+	background-color: #0d47a1;
+	padding: 1.5rem;
+	border: 1px transparent;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+#events-list{
+	background: white;
+	border: 1px solid transparent;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	max-height: 800px;
+	overflow-y: auto;
+}
+
+#events-list div.event{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+#events-list div.event div.event-date{
+	width: 25%;
+	margin: 1rem 0;
+	border-right: 1px solid grey;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+span.spandate{
+	width: 100%;
+	text-align: center;
+	font-family: "arial",sans-serif;
+	font-size: 1.3rem;
+	color: #4e4e4e;
+	align-self: flex-start;
+	justify-self: flex-start;
+}
+
+span.spandayofweek{
+	font-family: "arial",sans-serif;
+	font-size: 1rem;
+	color: #4e4e4e;
+	align-self: flex-end;
+	padding-right: 15px;
+}
+
+#events-list div.event div.event-text{
+	width: 80%;
+	padding: 1rem;
+}
+
+#events-list div.event div.event-name{
+	font-size: 1.5rem;
+}
+
+#loading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+i.events-spinner{
+	font-size: 8rem;
+}
