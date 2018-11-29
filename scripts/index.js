@@ -30,6 +30,7 @@ const __tabletop = (() => {
         },
         populateEventsList: () => {
             $("#loading").remove();
+            $("#loading-desktop").remove();
             const eventList = $("#events-list");
             let i = 0;
             while (i < this.events.length){

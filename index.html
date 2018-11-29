@@ -21,7 +21,7 @@
 		<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjlsM35OAAACCklEQVQ4T11STaupYRT1G5gZSGfCDyCUogyMTKRkgsJAnWOgDJSiSCLKQD7qGFFGhGQqjAyMfJQwkAiRj3w7nPV63tu93TV423s/az17r/28jOc/+Pn52e/3dPIH5/OZjt74XzCZTOjkjcfjsdls6OQNWnC/32ez2Wg06vf7rVbreDzebrdMJpNOpxuNxmAwQEqYtGA4HEJDYpyVy2W73S6TyT4/P8PhcK1W63Q6OHq9Xgwcr9drlK7XKykBhUKBw+Gw2Wy1Wm00GpPJJCqY7XK5MDDlcrnM5XKHw4GwgWKxyGQyPz4+FAqFSqVyuVzoAyZupEba7XaRSKRer2NFYKNVIpEQi8VcLhdfiUSiVCqj0SiYtADSXq+Ha2w2m9frTaVSi8Uim83y+XwWi8Xj8axW63a7/SsAYMNgMJhMJrQOBAKwiIkrlQo21m63S6XSarUiTFrg8/mEQiHWotfr8/m82+1uNpun04lYgldoCJMSwK7FYgFbIBBotdqvry+n0xkKhbBAIgC63S68YfUMvPx0OoUBnU4nl8ulUqlGo0GAbY7HY9wNNi4lQ+IKqgOq1WoVzrBBkUgEttlsjsViwWBwPp+DAMd4bAQAJcAvBNPYvcfjgQeHw4GXwd8Rj8f9fv/39zesk0egBaQpShgPf9S7TgGd4RuDkZTQ6C2RBCDvTWISoBVJKTyfv8a3XnMDP+lBAAAAAElFTkSuQmCC" />
 
 		<!-- Custom styles for this template -->
-		<link rel="stylesheet" type="text/css" href="css/welcome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/welcome.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/mdb.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
@@ -82,8 +82,16 @@
 						<h1 class="display-4">Onegaishimasu!</h1>
 						<p class="lead">Play go in Columbus, Ohio! New and experienced players of all strengths welcome.</p>
 					</div>
-					<div id="meetup-map-container">
-						<iframe id="meetup-map" src="https://www.google.com/maps/d/u/1/embed?mid=1dnpcS8HPTJ0oLg18RIgvLp-Z91Bx0sOY" width="640" height="480"></iframe>
+					<div id="event-widget">
+						<div id="events-header">
+							Upcoming events
+						</div>
+						<!-- Events will be populated here -->
+						<div id="events-list">
+							<div id="loading">
+								<i class="fa fa-cog fa-spin events-spinner"></i>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div id="panel-container" class="row">
@@ -101,22 +109,6 @@
 							<h5 class="card-title">WHO</h5>
 							<p class="card-text">Go We have players of varying age, ethnicity, and skill levels. Some rank from the
 								highly skilled 6 Dan and complete beginners join often. Our meetings are free and are welcoming to all.</p>
-						</div>
-					</div>
-					<div class="card" >
-						<img class="panel-image" src="img/location.jpg" alt="Locations - Bethel Road Tea Zone Bakery and Cup O' Joe Clintonville"/>
-						<div class="card-body">
-							<div id="event-widget">
-								<div id="events-header">
-									Upcoming events
-								</div>
-								<!-- Events will be populated here -->
-								<div id="events-list">
-									<div id="loading">
-										<i class="fa fa-cog fa-spin events-spinner"></i>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="card" >
