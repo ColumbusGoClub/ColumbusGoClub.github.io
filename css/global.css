@@ -137,7 +137,6 @@ nav{
 nav.navbar div.brand{
     display: flex;
     align-items: center;
-    opacity: 0.1;
 }
 
 #container{
@@ -178,6 +177,7 @@ ul#header-links-desktop li a.header-link:visited{
     font-size: large;
     margin: 0 1rem 0 1rem;
     border-left: #555555;
+    color: #222
 }
 
 .header-link:hover{
