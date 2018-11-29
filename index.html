@@ -5,6 +5,7 @@
 
 		<meta charset="utf-8">
 		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script src="scripts/global.min.js"></script>
 		<script src="scripts/dropdown.min.js"></script>
 		<script src="scripts/effects.min.js"></script>
 		<script src="scripts/index.min.js"></script>
@@ -25,56 +26,13 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/mdb.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.min.css"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 	</head>
 
 	<body>
-		<nav class="navbar navbar-light">
-			<div class="brand">
-				<a class="navbar-brand" href="index.html">
-					<img src="img/go-stones-b&w.png" height="60px" width="55px"/>
-				</a>
-				<span>The Columbus Go Club</span>
-			</div>
-			<ul id="header-links-desktop" class="nav">
-				<li class="nav-item">
-					<a class="nav-link header-link" href="checkin.html">Check In</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-link" href="library.html">View Library</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
-				</li>
-				<li class="nav-item">
-					<a href="events.html" class="nav-link header-link">Upcoming Events</a>
-				</li>
-			</ul>
-			<div id="header-links-mobile" class="dropdown">
-				<button class="navbar-toggler" type="button" data-target="#navbar-contents"
-						aria-controls="navbar-contents" aria-expanded="false" aria-label="Toggle menu">
-					<div class="animated-icon"><span></span><span></span><span></span></div>
-				</button>
-			</div>
-		</nav>
-		<div class="collapse navbar-collapse" id="navbar-contents">
-			<ul id="header-links-navbar" class="nav">
-				<li class="nav-item">
-					<a class="nav-link header-link" href="checkin.html">Check In</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-link" href="library.html">View Library</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
-				</li>
-				<li class="nav-item">
-					<a href="events.html" class="nav-link header-link">Upcoming Events</a>
-				</li>
-			</ul>
-		</div>
 		<div id="container">
 			<div id="center-column">
 				<div id="splash" class="row">
@@ -128,22 +86,6 @@
 			<!-- <script src="//dashboard.time.ly/js/embed.js" data-src="https://events.time.ly/x4h47lp" data-max-height="0" id="timely_script" class="timely-script"></script> -->
 		</div>
 	</body>
-
-	<footer>
-		<div id="blackstripe">
-			<div id="icon-plane">
-				<img id="icon-plane-img" src="img/paper-plane-icon.png" height="37px" width="50px"/>
-			</div>
-			<div id="organizer-email"><a id="email" href="mailto:organizer@columbusgo.club"><i>organizer@columbusgo.club</i></a></div>
-			<div id="reach-out">Questions? Reach out.</div>
-			<div id="tourney-callout">Make sure you connect with our google or facebook group to hear when the next tournament will be.</div>
-			<div id="icons">
-				<a href="https://www.facebook.com/groups/cbusgoclub/" target="_blank"><img class="socialIcon" src="img/facebook-circle.png"/></a>
-				<a href="https://groups.google.com/group/columbusgoclub/subscribe" target="_blank"><img class="socialIcon" src="img/email-circle.png"/></a>
-				<a href="https://www.meetup.com/Columbus-Go-Baduk-Weiqi-Club/" target="_blank"><img class="socialIcon" src="img/meetup-circle.png"/></a>
-			</div>
-		</div>
-	</footer>
 	<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"09da399c9dcf0ac4b548e25ff","lid":"41ec52a08a"}) })</script>-->
 	<script src="scripts/mdb.min.js"></script>
 </html>
