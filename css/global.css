@@ -124,6 +124,7 @@ body{
 }
 
 nav{
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,8 +143,14 @@ nav.navbar div.brand{
 #container{
     width: 100%;
     min-height: 35rem;
-    margin: 0;
+    margin: 6rem 0 0 0;
     padding: 0;
+    background-color: white;
+    background-image: url('../img/mountains.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
 }
 
 ul#header-links-desktop li{
@@ -181,6 +188,7 @@ ul#header-links-desktop li a.header-link:visited{
     font-size: large;
     margin: 0 1rem 0 1rem;
     border-left: #555555;
+    color: #222;
 }
 
 .header-link:hover{
