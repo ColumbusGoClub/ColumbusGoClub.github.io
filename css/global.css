@@ -167,6 +167,10 @@ ul#header-links-desktop li a.header-link:visited{
     height: auto;
 }
 
+#header-links-mobile, #header-links-mobile button.navbar-toggler{
+    z-index: 3;     /* Needs to sit on top of the mobile nav itself, or user won't be able to close nav! */
+}
+
 #header-links-mobile div.dropdown-menu a.dropdown-item{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -384,42 +388,46 @@ a#email:visited,a#email:active{
 
 /* Full-screen mobile hamburger menu  */
 
-#navbar-contents, #navbar-contents *{
-    position: absolute;
+#navbar-contents{
+    position: fixed;
     top: 0;
     left: 0;     /* position across the whole screen */
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    opacity: 0;
-    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.85;
 }
 
-#navbar-contents li.nav-item{
-    width: 25%;
-    align-items: center;
+#navbar-contents span.nav-item{
+    width: 100%;
     justify-content: center;
     display: flex;
 }
 
-#navbar-contents li.nav-item a.nav-link{
-    font-size: 1.2rem;
+#header-links-navbar span.nav-item a.nav-link{
+    font-size: 2.5rem;
     text-align: center;
+    color: black;
+}
+
+#header-links-navbar span.nav-item a.nav-link:hover{
+    text-decoration: underline;
 }
 
 #header-links-navbar{
-    height: 100%;
-    background-color: black;
+    position: fixed;
+    height: 50%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 15vh;
+    margin-top: auto;
+    margin-bottom: auto;
     text-transform: uppercase;
 }
 
-#header-links-navbar li.nav-item a{
-    color: white;
-}
-
-#header-links-navbar li.nav-item a:hover{
-    text-decoration: underline;
-}
 
 div#icons a{
     margin: 0 1rem;

@@ -1,10 +1,3 @@
-$(document).ready(function() {
-    $('.navbar-toggler').on('click', function () {
-        $('.animated-icon').toggleClass('open');
-        $('#navbar-contents').slideToggle();
-    });
-});
-
 // Load up the events module, fetching event data w/ Tabletop
 const __tabletop = (() => {
     return {

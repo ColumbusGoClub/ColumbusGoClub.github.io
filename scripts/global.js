@@ -32,17 +32,17 @@ const header =
 const navmenu =
 `
 <div id="navbar-contents">
-    <ul id="header-links-navbar" class="nav">
-        <li class="nav-item">
+    <div id="header-links-navbar" class="nav" >
+        <span class="nav-item">
             <a class="nav-link header-link" href="checkin.html">Check In</a>
-        </li>
-        <li class="nav-item">
+        </span>
+        <span class="nav-item">
             <a class="nav-link header-link" href="library.html">View Library</a>
-        </li>
-        <li class="nav-item">
+        </span>
+        <span class="nav-item">
             <a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
-        </li>
-    </ul>
+        </span>
+    </div>
 </div>
 
 `;
@@ -66,10 +66,23 @@ const footer =
 
 `;
 
-const inject = function(){
+const bootstrap = function(){
     const bodyTag = $('body');
     bodyTag.prepend(function(){return navmenu + header;});
     bodyTag.append(function(){return footer;});
+    $('#navbar-contents').hide();
+    const iconElem = $('.animated-icon');
+
+    $('.navbar-toggler').click(function(e){
+        let isOpen = iconElem.hasClass('open');
+
+        if (isOpen) { // close!
+            $('#navbar-contents').fadeOut(400, ()=>{});
+        } else { // open!
+            $('#navbar-contents').fadeIn(400, ()=>{});
+        }
+        iconElem.toggleClass('open');
+    });
 };
 
-$( inject );
+$( bootstrap );
