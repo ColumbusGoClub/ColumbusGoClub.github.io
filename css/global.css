@@ -5,6 +5,16 @@
     }
 }
 
+@media(max-device-width: 769px) or (max-width: 769px){
+    nav.navbar.navbar-light{
+        position: fixed;
+        top: 0;
+    }
+    #container{
+        margin: 6rem 0 0 0 !important;
+    }
+}
+
 @media(max-device-width: 769px){
     nav.navbar div span{
         font-size: 3rem;
@@ -101,7 +111,7 @@
 
 @media(min-device-width: 920px) and (max-width: 1149px){
     nav .header-link {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -436,6 +446,11 @@ a#email:visited,a#email:active{
     text-transform: uppercase;
 }
 
+.scroll-follow{
+    position: fixed !important;
+    right: 2.25vw;
+    top: 3.75vh;
+}
 
 div#icons a{
     margin: 0 1rem;

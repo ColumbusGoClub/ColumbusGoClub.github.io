@@ -72,14 +72,17 @@ const bootstrap = function(){
     bodyTag.append(function(){return footer;});
     $('#navbar-contents').hide();
     const iconElem = $('.animated-icon');
+    const entireButton = $($('#header-links-mobile')[0]);
 
     $('.navbar-toggler').click(function(e){
         let isOpen = iconElem.hasClass('open');
 
         if (isOpen) { // close!
             $('#navbar-contents').fadeOut(400, ()=>{});
+            entireButton.removeClass('scroll-follow');
         } else { // open!
             $('#navbar-contents').fadeIn(400, ()=>{});
+            entireButton.addClass('scroll-follow');
         }
         iconElem.toggleClass('open');
     });
