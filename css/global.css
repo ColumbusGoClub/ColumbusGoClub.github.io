@@ -1,6 +1,6 @@
 @media(min-device-width: 770px){
     nav.navbar div span{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: normal;
     }
 }
@@ -157,7 +157,7 @@ nav.navbar div.brand{
     padding: 0;
     background-color: white;
     background-image: url('../img/mountains.jpg');
-    background-position: bottom;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     height: auto;
@@ -168,9 +168,14 @@ ul#header-links-desktop li{
 }
 
 ul#header-links-desktop li a.header-link {
-    font-size: large;
+    font-size: 1.5rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+}
+
+ul#header-links-desktop li a.header-link:hover {
+    text-decoration: underline;
+    color: darkred;
 }
 
 ul#header-links-desktop li a.header-link:visited{
@@ -203,7 +208,7 @@ ul#header-links-desktop li a.header-link:visited{
 
 .header-link:hover{
     text-decoration: none;
-    color: darkblue;
+    color: black;
 }
 
 #blackstripe{
@@ -413,8 +418,8 @@ a#email:visited,a#email:active{
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    background-color: white;
-    opacity: 0.85;
+    background-color: #4e4e4e;
+    opacity: 0.95;
 }
 
 #navbar-contents span.nav-item{
@@ -424,9 +429,9 @@ a#email:visited,a#email:active{
 }
 
 #header-links-navbar span.nav-item a.nav-link{
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 #header-links-navbar span.nav-item a.nav-link:hover{

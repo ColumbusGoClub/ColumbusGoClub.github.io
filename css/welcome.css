@@ -1,4 +1,4 @@
-@media(min-width: 1151px){
+‰@media(min-width: 1151px){
 	#welcome{
 		width: 40%;
 		margin-top: 4rem;
@@ -352,7 +352,8 @@ h2{
 #events-header{
 	color: white;
 	font-family: "arial", sans-serif;
-	background-color: #0d47a1;
+	/* background-color: #0d47a1; */
+	background-color: #4e4e4e;
 	padding: 1.5rem;
 	border: 1px transparent;
 	border-top-right-radius: 5px;
