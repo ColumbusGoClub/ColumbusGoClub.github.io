@@ -1,5 +1,5 @@
 body{
-    min-width: 600px;
+    /* min-width: 600px; */
     width: auto !important;
 }
 
@@ -37,7 +37,7 @@ body{
         height: 90px;
     }
     footer #blackstripe{
-        height: 35rem;
+        height: 25rem;
     }
     #blackstripe #organizer-email{
         /* font-size: 3rem; */
@@ -173,8 +173,7 @@ nav.navbar div span{
 
 #container{
     width: 100%;
-    /* removed to fix the issue where there is too much whitespace on mobile */
-    /* min-height: 35rem; */
+    min-height: 25rem;
     padding: 0;
     background-color: rgba(255,255,255,0.75);
     height: auto;
