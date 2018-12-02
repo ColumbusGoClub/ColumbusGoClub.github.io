@@ -21,11 +21,11 @@
 		<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjlsM35OAAACCklEQVQ4T11STaupYRT1G5gZSGfCDyCUogyMTKRkgsJAnWOgDJSiSCLKQD7qGFFGhGQqjAyMfJQwkAiRj3w7nPV63tu93TV423s/az17r/28jOc/+Pn52e/3dPIH5/OZjt74XzCZTOjkjcfjsdls6OQNWnC/32ez2Wg06vf7rVbreDzebrdMJpNOpxuNxmAwQEqYtGA4HEJDYpyVy2W73S6TyT4/P8PhcK1W63Q6OHq9Xgwcr9drlK7XKykBhUKBw+Gw2Wy1Wm00GpPJJCqY7XK5MDDlcrnM5XKHw4GwgWKxyGQyPz4+FAqFSqVyuVzoAyZupEba7XaRSKRer2NFYKNVIpEQi8VcLhdfiUSiVCqj0SiYtADSXq+Ha2w2m9frTaVSi8Uim83y+XwWi8Xj8axW63a7/SsAYMNgMJhMJrQOBAKwiIkrlQo21m63S6XSarUiTFrg8/mEQiHWotfr8/m82+1uNpun04lYgldoCJMSwK7FYgFbIBBotdqvry+n0xkKhbBAIgC63S68YfUMvPx0OoUBnU4nl8ulUqlGo0GAbY7HY9wNNi4lQ+IKqgOq1WoVzrBBkUgEttlsjsViwWBwPp+DAMd4bAQAJcAvBNPYvcfjgQeHw4GXwd8Rj8f9fv/39zesk0egBaQpShgPf9S7TgGd4RuDkZTQ6C2RBCDvTWISoBVJKTyfv8a3XnMDP+lBAAAAAElFTkSuQmCC" />
 
 		<!-- Custom styles for this template -->
-		<link rel="stylesheet" type="text/css" href="css/welcome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/welcome.css"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/mdb.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/global.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -33,21 +33,21 @@
 
 	<body>
 		<div id="container">
+			<div id="splash" class="row">
+				<div id="welcome" class="jumbotron">
+					<h1 class="display-3">"Just one more game, they said. That was yesterday."</h1>
+					<p class="lead">- Chinese proverb</p>
+				</div>
+			</div>
 			<div id="center-column">
-				<div id="splash" class="row">
-					<div id="welcome" class="jumbotron">
-						<h1 class="display-3">Onegaishimasu!</h1>
-						<p class="lead">Play go in Columbus, Ohio! New and experienced players of all strengths welcome.</p>
+				<div id="event-widget">
+					<div id="events-header">
+						Upcoming events
 					</div>
-					<div id="event-widget">
-						<div id="events-header">
-							Upcoming events
-						</div>
-						<!-- Events will be populated here -->
-						<div id="events-list">
-							<div id="loading">
-								<i class="fa fa-cog fa-spin events-spinner"></i>
-							</div>
+					<!-- Events will be populated here -->
+					<div id="events-list">
+						<div id="loading">
+							<i class="fa fa-cog fa-spin events-spinner"></i>
 						</div>
 					</div>
 				</div>

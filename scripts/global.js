@@ -53,7 +53,7 @@ const footer =
 		<div id="icon-plane">
 			<img id="icon-plane-img" src="img/paper-plane-icon.png" height="37px" width="50px"/>
 		</div>
-		<div id="organizer-email"><a id="email" href="mailto:organizer@columbusgo.club"><i>organizer@columbusgo.club</i></a></div>
+		<div id="organizer-email"><a class="footer-link" href="mailto:organizer@columbusgo.club"><i>organizer@columbusgo.club</i></a></div>
     <!--
 		<div id="tourney-callout">Make sure you connect with our facebook or meetup group to hear when the next tournament will be.</div>
     -->
@@ -62,7 +62,6 @@ const footer =
 			<a href="https://www.meetup.com/Columbus-Go-Baduk-Weiqi-Club/" target="_blank"><img class="socialIcon" src="img/meetup-circle.png"/></a>
 		</div>
     <div id="footer-links">
-      <a class="footer-link" href="checkin.html">Check In</a>
       <a class="footer-link" href="checkin.html">Check In</a>
       <a class="footer-link" href="checkin.html">Check In</a>
       <a class="footer-link" href="checkin.html">Check In</a>
@@ -79,6 +78,12 @@ const bootstrap = function(){
     $('#navbar-contents').hide();
     const iconElem = $('.animated-icon');
     const entireButton = $($('#header-links-mobile')[0]);
+    const heading = $('#welcome h1');
+    const subheading = $('#welcome p');
+    heading.hide();
+    subheading.hide();
+    heading.fadeIn(3000);
+    subheading.fadeIn(3000);
 
     $('.navbar-toggler').click(function(e){
         let isOpen = iconElem.hasClass('open');
