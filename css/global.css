@@ -211,6 +211,19 @@ ul#header-links-desktop li a.header-link:visited{
     color: black;
 }
 
+.footer-link{
+    font-family: "arial", sans-serif;
+    font-size: large;
+    margin: 0 1rem 0 1rem;
+    border-left: #555555;
+    color: #222;
+}
+
+.footer-link:hover{
+    text-decoration: none;
+    color: black;
+}
+
 #blackstripe{
     height: 280px;
     width: 100%;
@@ -265,6 +278,14 @@ a#email:visited,a#email:active{
     width: 100%;
     text-align: center;
     margin: 0 auto 20px auto;
+}
+
+#footer-links{
+    font-family: 'Abel', serif;
+    color: #ddd;
+    font-size: 1.5em;
+    width: 300px;
+    margin: 0 auto 15px;
 }
 
 #icons{

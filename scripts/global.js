@@ -54,13 +54,19 @@ const footer =
 			<img id="icon-plane-img" src="img/paper-plane-icon.png" height="37px" width="50px"/>
 		</div>
 		<div id="organizer-email"><a id="email" href="mailto:organizer@columbusgo.club"><i>organizer@columbusgo.club</i></a></div>
-		<div id="reach-out">Questions? Reach out.</div>
-		<div id="tourney-callout">Make sure you connect with our google or facebook group to hear when the next tournament will be.</div>
-		<div id="icons">
+    <!--
+		<div id="tourney-callout">Make sure you connect with our facebook or meetup group to hear when the next tournament will be.</div>
+    -->
+    <div id="icons">
 			<a href="https://www.facebook.com/groups/cbusgoclub/" target="_blank"><img class="socialIcon" src="img/facebook-circle.png"/></a>
-			<a href="https://groups.google.com/group/columbusgoclub/subscribe" target="_blank"><img class="socialIcon" src="img/email-circle.png"/></a>
 			<a href="https://www.meetup.com/Columbus-Go-Baduk-Weiqi-Club/" target="_blank"><img class="socialIcon" src="img/meetup-circle.png"/></a>
 		</div>
+    <div id="footer-links">
+      <a class="footer-link" href="checkin.html">Check In</a>
+      <a class="footer-link" href="checkin.html">Check In</a>
+      <a class="footer-link" href="checkin.html">Check In</a>
+      <a class="footer-link" href="checkin.html">Check In</a>
+    </div>
 	</div>
 </footer>
 
