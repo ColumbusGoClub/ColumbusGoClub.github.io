@@ -11,7 +11,7 @@ const header =
     </div>
     <ul id="header-links-desktop" class="nav">
         <li class="nav-item">
-            <a class="nav-link header-link" href="library.html">View Library</a>
+            <a class="nav-link header-link" href="library.html">Library</a>
         </li>
         <li class="nav-item">
             <a class="nav-link header-link" href="team.html">Team</a>
@@ -34,7 +34,7 @@ const navmenu =
 <div id="navbar-contents">
     <div id="header-links-navbar" class="nav" >
         <span class="nav-item">
-            <a class="nav-link header-link" href="library.html">View Library</a>
+            <a class="nav-link header-link" href="library.html">Library</a>
         </span>
         <span class="nav-item">
             <a class="nav-link header-link" href="team.html">Team</a>
@@ -63,8 +63,9 @@ const footer =
 		</div>
     <div id="footer-links">
       <a class="footer-link" href="checkin.html">Check In</a>
-      <a class="footer-link" href="norms.html">Club norms</a>
-      <a class="footer-link" href="youthsignup.html">Youth Tournament Signup</a>
+      <a class="footer-link" href="norms.html">Club Norms</a>
+      <a class="footer-link" href="youthsignup.html">Youth Signup</a>
+      <a class="footer-link" href="youthgameresults.html">Youth Game Results</a>
     </div>
 	</div>
 </footer>
