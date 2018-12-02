@@ -11,13 +11,13 @@ const header =
     </div>
     <ul id="header-links-desktop" class="nav">
         <li class="nav-item">
-            <a class="nav-link header-link" href="checkin.html">Check In</a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link header-link" href="library.html">View Library</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
+            <a class="nav-link header-link" href="team.html">Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link header-link" href="teaching.html">Teaching</a>
         </li>
     </ul>
     <div id="header-links-mobile" class="dropdown">
@@ -34,13 +34,13 @@ const navmenu =
 <div id="navbar-contents">
     <div id="header-links-navbar" class="nav" >
         <span class="nav-item">
-            <a class="nav-link header-link" href="checkin.html">Check In</a>
-        </span>
-        <span class="nav-item">
             <a class="nav-link header-link" href="library.html">View Library</a>
         </span>
         <span class="nav-item">
-            <a class="nav-link header-link" href="youthsignup.html">Youth Tournament Signup</a>
+            <a class="nav-link header-link" href="team.html">Team</a>
+        </span>
+        <span class="nav-item">
+            <a class="nav-link header-link" href="teaching.html">Teaching</a>
         </span>
     </div>
 </div>
@@ -63,8 +63,8 @@ const footer =
 		</div>
     <div id="footer-links">
       <a class="footer-link" href="checkin.html">Check In</a>
-      <a class="footer-link" href="checkin.html">Check In</a>
-      <a class="footer-link" href="checkin.html">Check In</a>
+      <a class="footer-link" href="norms.html">Club norms</a>
+      <a class="footer-link" href="youthsignup.html">Youth Tournament Signup</a>
     </div>
 	</div>
 </footer>

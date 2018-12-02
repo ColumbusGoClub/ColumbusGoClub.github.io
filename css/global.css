@@ -5,7 +5,7 @@ body{
 
 @media(min-device-width: 770px){
     nav.navbar div span{
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: normal;
     }
 }
@@ -154,6 +154,12 @@ nav{
 nav.navbar div.brand{
     display: flex;
     align-items: center;
+}
+
+nav.navbar div span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #container{
@@ -422,6 +428,12 @@ a.footer-link:visited,a.footer-link:active{
 }
 
 /* Full-screen mobile hamburger menu  */
+
+@media(min-device-width: 920px) and (min-width: 920px){
+    #navbar-contents{
+        display: none !important;
+    }
+}
 
 #navbar-contents{
     position: fixed;
