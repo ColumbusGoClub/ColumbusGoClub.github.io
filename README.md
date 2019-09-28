@@ -33,13 +33,13 @@ This is the website for the **Columbus Go Club**
 
 
 ### index.html  
-- [ ] Integrate or Redo index page with bootstrap (to make mobile friendly)
+- [x] Integrate or Redo index page with bootstrap (to make mobile friendly)
 - [ ] Recode blocks
 - [ ] Properly insert meetup calendar
   Using HerokuApp: https://github.com/munen/meetup-calendar
   Using Meetup API: https://code.likeagirl.io/dont-be-scared-of-api-s-a-beginner-s-guide-to-api-s-using-meetup-and-rails-part-1-7fac68635c49
-- [ ] Google Maps integration
-- [ ] add navbar
+- [x] Google Maps integration
+- [x] add navbar
 
 ### Library
 - [ ] Change the spreadsheet to have a column called "copies"
@@ -57,7 +57,7 @@ This is the website for the **Columbus Go Club**
 - [ ] have a more official code of conduct, perhaps match the AGA
 
 ### checkin.css
-- [ ] integrate the select .form-container and .custom-select CSS (or at least have the CSS match)
+- [x] integrate the select .form-container and .custom-select CSS (or at least have the CSS match)
 
 ### library.html
 - [ ] create a page that allows members to browse the entire library database

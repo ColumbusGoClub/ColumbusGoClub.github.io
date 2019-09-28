@@ -3,27 +3,31 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/global.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 <!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/checkin.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
 
 </head>
 <body>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-
-<div class="autocomplete form" id="myForm">
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="__checkin.submitted=true;">
-    <h1>Check in at one of our events!</h1>
-    <div id="desktop-submit-container">
-      <div id="input-container">
-        <input id="myInput" type="text" placeholder="Autocomplete is loading..." name="entry.890056897" required autofocus>
+<div id="container" class="row">
+  <div id="myForm" class="autocomplete form">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSe0a9DrFTU325O7Lxrw9hwMFBhkACDld6IEKqtSUvwhnlRDIQ/formResponse" class="form-container" autocomplete="off" method="post" target="hidden_iframe" onsubmit="__checkin.submitted=true;">
+      <h1>Check in at one of our events!</h1>
+      <div id="desktop-submit-container">
+        <div id="input-container">
+          <input id="myInput" type="text" placeholder="Autocomplete is loading..." name="entry.890056897" required autofocus>
+        </div>
+        <button type="submit" id="checkin-submit-desktop" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
       </div>
-      <button type="submit" id="checkin-submit-desktop" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
-    </div>
 
-    <button type="submit" id="checkin-submit-mobile" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
-  </form>
+      <button type="submit" id="checkin-submit-mobile" class="btn" value="send" onclick="__checkin.validateUser(document.getElementById('myInput').value)">Submit</button>
+    </form>
+  </div>
 </div>
-
 <script src="scripts/checkin.min.js"></script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="__submitCheckin()"></iframe>
 </body>

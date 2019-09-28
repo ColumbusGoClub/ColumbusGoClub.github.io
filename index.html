@@ -14,107 +14,89 @@
 		</script>
 		
 		<meta charset="utf-8">
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+		<script src="scripts/global.js"></script>
+		<script src="scripts/dropdown.min.js"></script>
+		<script src="scripts/effects.min.js"></script>
+		<script src="scripts/index.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<meta name="keywords" content="Go, Go Game, Columbus, Club, Weiqi, Wei Qi, Weichi, Baduk, Columbus Go Club, Play Go in Columbus, Columbus Ohio Go Club">
 		<meta name="description" content="Come learn and play the ancient game of Go in Columbus, Ohio">
 
 		<title>Columbus Go Club</title>
 
-		<!-- No clue what this is -->
+		<!-- favicon image (displays in browser tab next to name), encoded in a format called base 64 -->
 		<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjlsM35OAAACCklEQVQ4T11STaupYRT1G5gZSGfCDyCUogyMTKRkgsJAnWOgDJSiSCLKQD7qGFFGhGQqjAyMfJQwkAiRj3w7nPV63tu93TV423s/az17r/28jOc/+Pn52e/3dPIH5/OZjt74XzCZTOjkjcfjsdls6OQNWnC/32ez2Wg06vf7rVbreDzebrdMJpNOpxuNxmAwQEqYtGA4HEJDYpyVy2W73S6TyT4/P8PhcK1W63Q6OHq9Xgwcr9drlK7XKykBhUKBw+Gw2Wy1Wm00GpPJJCqY7XK5MDDlcrnM5XKHw4GwgWKxyGQyPz4+FAqFSqVyuVzoAyZupEba7XaRSKRer2NFYKNVIpEQi8VcLhdfiUSiVCqj0SiYtADSXq+Ha2w2m9frTaVSi8Uim83y+XwWi8Xj8axW63a7/SsAYMNgMJhMJrQOBAKwiIkrlQo21m63S6XSarUiTFrg8/mEQiHWotfr8/m82+1uNpun04lYgldoCJMSwK7FYgFbIBBotdqvry+n0xkKhbBAIgC63S68YfUMvPx0OoUBnU4nl8ulUqlGo0GAbY7HY9wNNi4lQ+IKqgOq1WoVzrBBkUgEttlsjsViwWBwPp+DAMd4bAQAJcAvBNPYvcfjgQeHw4GXwd8Rj8f9fv/39zesk0egBaQpShgPf9S7TgGd4RuDkZTQ6C2RBCDvTWISoBVJKTyfv8a3XnMDP+lBAAAAAElFTkSuQmCC" />
 
 		<!-- Custom styles for this template -->
-		<link rel="stylesheet" type="text/css" href="css/welcome.min.css"/>
-		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mdb.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 		
 	</head>
 
 	<body>
-		<div id='container'>
-			<h1 id='welcome-heading'>THE COLUMBUS GO CLUB</h1>
-			<div id='go-stones'>
-				<img src="img/go-stones-b&w.png" height="167px" width="180px"/>
+		<div id="container">
+			<div id="splash" class="row">
+				<div id="welcome" class="jumbotron">
+					<h1 class="display-3">"Just one more game, they said. That was yesterday."</h1>
+					<p class="lead">- Chinese proverb</p>
+				</div>
 			</div>
-			<h3 id='tagline'>Ancient &middot; Simple &middot; Beautiful</h3>
-			<div id="panel-container">
-				<!-- <div id="come-join-us" class="fade-in-left">Come Join Us!</div> -->
-				<div id="about-panels">
-					<div id="panel-three" class="panel fade-in-left">
-						<img class="panel-image" src="img/inspirational.jpg"/>
-						<div id="panel-three-text" class="panel-text">
-						<div class="panel-header">WHAT</div>
-							<div class="panel-main-text">
-								<p class="blurb">Go is one of the oldest games still played today. It was invented in China over
-								   2000 years ago and has spread to Korea, Japan, and all over the world.</p><br/>
-
-								<p class="blurb">The game takes only minutes to learn, but a lifetime to master.</p>
-							</div>
+			<div id="center-column">
+				<div id="event-widget">
+					<div id="events-header">
+						Upcoming events
+					</div>
+					<!-- Events will be populated here -->
+					<div id="events-list">
+						<div id="loading">
+							<i class="fa fa-cog fa-spin events-spinner"></i>
 						</div>
 					</div>
-					<div id="panel-one" class="panel fade-in-left">
+				</div>
+				<div id="panel-container" class="row">
+					<div class="card" >
+						<img class="panel-image" src="img/inspirational.jpg" alt="Go board close up"/>
+						<div class="card-body">
+							<h5 class="card-title">WHAT</h5>
+							<p class="card-text">Go is one of the oldest games still played today. It was invented in China over
+								2000 years ago and has spread to Korea, Japan, and all over the world.</p>
+						</div>
+					</div>
+					<div class="card" >
 						<img class="panel-image" src="img/playing-go.jpg"/>
-						<div id="panel-one-text" class="panel-text">
-							<div class="panel-header">WHO</div>
-							<div class="panel-main-text">
-								<p class="blurb">We have players of varying age, ethnicity, and skill levels. Some rank from the
-								   highly skilled 6 Dan all the way to the newest beginner.</p><br/>
-
-								<p class="blurb">Our meetings are free and are welcoming to absolute beginners and highly skilled
-								   players alike.</p>
-							</div>
+						<div class="card-body">
+							<h5 class="card-title">WHO</h5>
+							<p class="card-text">Go We have players of varying age, ethnicity, and skill levels. Some rank from the
+								highly skilled 6 Dan and complete beginners join often. Our meetings are free and are welcoming to all.</p>
 						</div>
 					</div>
-					<div id="panel-two" class="panel fade-in-left">
-						<img class="panel-image" src="img/location.jpg"/>
-						<div id="panel-two-text" class="panel-text">
-							<div class="panel-header">WHEN & WHERE</div>
-							<div class="panel-main-text">
-								<p class="blurb">We meet every Sunday from 1pm till 5pm at a Korean tea shop (see left) next to
-								   the Micro Center on Bethel Rd. Many players bring their own boards.</p><br/>
-
-								<p class="blurb">Tea Zone Cafe & Bakery - 5025 Olentangy River Rd</p><br/>
-							</div>
-						</div>
-					</div>
-					<div id="panel-four" class="panel fade-in-left">
-						<img class="panel-image" src="img/club-players.jpg"/>
-						<div id="panel-four-text" class="panel-text">
-							<div class="panel-header">Tournaments</div>
-							<div class="panel-main-text">
-								<p class="blurb">People from all over Ohio and beyond travel to Columbus four times a year for one
-												 of our tournaments. Players can win prizes and trophies, get official rankings from
-												 the AGA (American Go Association), and play good games with new friends.</p><br/>
-
-								<p class="blurb">Make sure you connect with our google or facebook group to hear when the next
-												 tournament will be.</p>
-							</div>
+					<div class="card" >
+						<img class="panel-image" src="img/club-players.jpg" alt="Club event in progress"/>
+						<div class="card-body">
+							<h5 class="card-title">TOURNAMENTS</h5>
+							<p class="card-text">People from all over Ohio and beyond travel to Columbus four times a year for one
+								of our tournaments. Players can win prizes and trophies, get official rankings from
+								the AGA (American Go Association), and play good games with new friends.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- TODO Move calendar (after doing it correctly) to a better spot on the page -->
 		<div class="calendar">
-			<script src="//dashboard.time.ly/js/embed.js" data-src="https://events.time.ly/x4h47lp" data-max-height="0" id="timely_script" class="timely-script"></script>
+			<!-- <script src="//dashboard.time.ly/js/embed.js" data-src="https://events.time.ly/x4h47lp" data-max-height="0" id="timely_script" class="timely-script"></script> -->
 		</div>
 	</body>
-
-	<footer>
-		<div id="blackstripe">
-			<div id="icon-plane">
-				<img id="icon-plane-img" src="img/paper-plane-icon.png" height="37px" width="50px"/>
-			</div>
-			<div id="organizer-email"><a id="email" href="mailto:organizer@columbusgo.club"><i>organizer@columbusgo.club</i></a></div><br/>
-			<div id="reach-out">Questions? Reach out.</div>
-			<div id="icons">
-				<a href="https://www.facebook.com/groups/cbusgoclub/" target="_blank"><img class="socialIcon" src="img/facebook-circle.png"/></a>
-				<a href="https://groups.google.com/group/columbusgoclub/subscribe" target="_blank"><img class="socialIcon" src="img/email-circle.png"/></a>
-				<a href="https://www.meetup.com/Columbus-Go-Baduk-Weiqi-Club/" target="_blank"><img class="socialIcon" src="img/meetup-circle.png"/></a>
-			</div>
-		</div>
-	</footer>
-
-	<script src="scripts/jquery-1.12.2.min.js"></script>
-	<script src="scripts/effects.min.js"></script>
-	<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"09da399c9dcf0ac4b548e25ff","lid":"41ec52a08a"}) })</script>
-
+	<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"09da399c9dcf0ac4b548e25ff","lid":"41ec52a08a"}) })</script>-->
+	<script src="scripts/mdb.min.js"></script>
 </html>
