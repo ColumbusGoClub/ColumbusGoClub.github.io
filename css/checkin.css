@@ -1,4 +1,4 @@
-body {font-family: Arial, Helvetica, sans-serif;display: flex;}
+body {font-family: Arial, Helvetica, sans-serif;display: flex;overflow-y: hidden;}
 * {box-sizing: border-box;}
 
 @media(max-width: 719px){
@@ -57,6 +57,17 @@ body {font-family: Arial, Helvetica, sans-serif;display: flex;}
 #myInput{
   margin-bottom: 0.5em;
 }
+
+#blackstripe{
+  position: fixed;
+  bottom: 0;
+}
+
+/*
+#container, #container *{
+  overflow-y: hidden;
+}
+*/
 
 /* Add styles to the form container */
 .form-container {
